@@ -1,59 +1,59 @@
 ---
 title: "Worklog Tuần 9"
-date: 2024-01-01
-weight: 1
+date: 2026-06-08
+weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
+
 {{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+Lưu ý: Nội dung dưới đây chỉ dùng để tham khảo, vui lòng không sao chép nguyên văn cho báo cáo của bạn.
 {{% /notice %}}
 
 
 ### Mục tiêu tuần 9:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu các tính năng cơ bản của AWS Support.
+* Hiểu AWS Support plan, support case và severity level.
+* Thực hành sử dụng AWS Support Center để xem tài liệu hỗ trợ và tạo support case đơn giản.
+
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Tìm hiểu mục đích của AWS Support <br> - Xem các AWS Support plan hiện có <br> - Phân biệt cơ bản giữa account support, billing support và technical support | 08/06/2026 | 08/06/2026 | <https://000009.awsstudygroup.com/> |
+| 3 | - Mở AWS Support Center <br> - Kiểm tra các support case và thông báo tài khoản hiện có <br> - Tìm hiểu cách tra cứu tài liệu AWS và hướng dẫn xử lý sự cố | 09/06/2026 | 09/06/2026 | <https://000009.awsstudygroup.com/2-support-center/> |
+| 4 | - Tìm hiểu category và severity level của support case <br> - Xem các thông tin cần chuẩn bị khi tạo support case <br> - Chuẩn bị mô tả ngắn cho một vấn đề đơn giản về tài khoản hoặc billing | 10/06/2026 | 10/06/2026 | <https://000009.awsstudygroup.com/3-create-support-case/> |
+| 5 | - Tạo một support case đơn giản để thực hành <br> - Chọn service, category và severity level phù hợp <br> - Nhập subject và mô tả vấn đề rõ ràng <br> - Chọn email làm phương thức liên hệ | 11/06/2026 | 11/06/2026 | <https://000009.awsstudygroup.com/3-create-support-case/> |
+| 6 | - Kiểm tra trạng thái và phản hồi của support case <br> - Bổ sung thông tin khi cần thiết <br> - Đóng support case thử nghiệm sau khi xem quy trình <br> - Ghi lại các bước chính để tham khảo sau này | 12/06/2026 | 12/06/2026 | <https://000009.awsstudygroup.com/4-manage-support-case/> |
 
 
 ### Kết quả đạt được tuần 9:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hiểu mục đích cơ bản của AWS Support.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Tìm hiểu một số AWS Support plan.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Phân biệt cơ bản giữa:
+  * Account support
+  * Billing support
+  * Technical support
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Làm quen với AWS Support Center.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Kiểm tra support case và thông báo tài khoản.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Biết cách tìm tài liệu AWS và hướng dẫn xử lý sự cố.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Hiểu cơ bản về category và severity level của support case.
 
+* Chuẩn bị được subject và mô tả vấn đề ngắn gọn, rõ ràng.
 
+* Tạo support case đơn giản trong AWS Support Center.
+
+* Chọn category và phương thức liên hệ phù hợp.
+
+* Kiểm tra trạng thái và phản hồi của support case.
+
+* Biết cách bổ sung thông tin, phản hồi và đóng support case.

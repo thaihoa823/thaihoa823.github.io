@@ -1,59 +1,50 @@
 ---
 title: "Worklog Tuần 1"
-date: 2024-01-01
+date: 2026-04-15
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
 ---
+
 {{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+Lưu ý: Nội dung dưới đây chỉ dùng để tham khảo, vui lòng không sao chép nguyên văn cho báo cáo của bạn.
 {{% /notice %}}
 
 
 ### Mục tiêu tuần 1:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Làm quen với các thành viên của First Cloud AI Journey.
+* Tìm hiểu các khái niệm cơ bản về AWS và AWS Free Tier.
+* Làm quen với AWS Management Console và AWS CLI.
+
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 4 | - Gặp gỡ và làm quen với các thành viên FCAJ <br> - Tìm hiểu lịch thực tập và yêu cầu viết worklog <br> - Đọc các quy định cơ bản của chương trình thực tập | 15/04/2026 | 15/04/2026 | |
+| 5 | - Tìm hiểu các khái niệm cơ bản về điện toán đám mây và AWS <br> - Tìm hiểu mục đích của một số dịch vụ phổ biến như EC2, S3, IAM và RDS <br> - Tìm hiểu AWS Free Tier và các chi phí có thể phát sinh | 16/04/2026 | 16/04/2026 | <https://000001.awsstudygroup.com/> |
+| 6 | - Tạo tài khoản AWS <br> - Làm quen với AWS Management Console <br> - Cài đặt và cấu hình AWS CLI <br> - Kiểm tra danh tính tài khoản hiện tại bằng AWS CLI <br> - Kiểm tra thông tin AWS Billing và Free Tier | 17/04/2026 | 17/04/2026 | <https://000001.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 1:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Làm quen với lịch thực tập, các quy định và cách viết worklog.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hiểu các khái niệm cơ bản về điện toán đám mây và AWS.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Biết mục đích cơ bản của một số dịch vụ AWS:
+  * Amazon EC2
+  * Amazon S3
+  * AWS IAM
+  * Amazon RDS
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Tạo tài khoản AWS và làm quen với AWS Management Console.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Cài đặt và thực hiện cấu hình cơ bản cho AWS CLI.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Sử dụng AWS CLI để kiểm tra danh tính tài khoản AWS hiện tại.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Biết cách kiểm tra AWS Billing và mức sử dụng Free Tier.
 
-
+* Hiểu rằng cần theo dõi và xóa các tài nguyên không còn sử dụng để tránh phát sinh chi phí.

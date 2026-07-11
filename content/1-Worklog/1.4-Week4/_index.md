@@ -1,57 +1,57 @@
 ---
 title: "Week 4 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-04
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
+
+{{% notice warning %}}
+Note: The following information is for reference purposes only. Please do not copy verbatim for your own report.
 {{% /notice %}}
 
 
 ### Week 4 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn the basic concepts of Amazon EC2.
+* Understand instance types, Amazon Machine Images, key pairs, and security settings.
+* Practice launching, connecting to, and managing a simple EC2 instance.
+
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 2 | - Learn the purpose of Amazon EC2 <br> - Understand Amazon Machine Images and instance types <br> - Review the main EC2 settings before launching an instance | 05/04/2026 | 05/04/2026 | <https://000004.awsstudygroup.com/> |
+| 3 | - Create an EC2 key pair <br> - Create or select a basic Security Group <br> - Launch a small Amazon Linux EC2 instance using a Free Tier eligible instance type | 05/05/2026 | 05/05/2026 | <https://000004.awsstudygroup.com/2-create-ec2/> |
+| 4 | - Check the EC2 instance status and network information <br> - Connect to the instance using SSH or EC2 Instance Connect <br> - Run several basic Linux commands on the instance | 05/06/2026 | 05/06/2026 | <https://000004.awsstudygroup.com/3-connect-ec2/> |
+| 5 | - Install a simple web server on the EC2 instance <br> - Create a basic test web page <br> - Update the Security Group to allow HTTP access <br> - Open the web page using the public IP address | 05/07/2026 | 05/07/2026 | <https://000004.awsstudygroup.com/4-install-web-server/> |
+| 6 | - Stop and start the EC2 instance <br> - Observe changes to the instance state and public IP address <br> - Review EC2 monitoring information <br> - Terminate the temporary instance after completing the practice | 05/08/2026 | 05/08/2026 | <https://000004.awsstudygroup.com/5-manage-ec2/> <br> <https://000004.awsstudygroup.com/6-clean-up/> |
 
 
 ### Week 4 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Understood the basic purpose of Amazon EC2.
 
-* Successfully created and configured an AWS Free Tier account.
+* Learned the basic meaning of:
+  * Amazon Machine Image
+  * Instance type
+  * Key pair
+  * Security Group
+  * Public IP address
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Created an EC2 key pair and selected a basic Security Group.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Launched a small Amazon Linux EC2 instance.
 
-* Used AWS CLI to perform basic operations such as:
+* Checked the instance status and network information.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Connected to the EC2 instance and used basic Linux commands.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Installed a simple web server and created a test web page.
+
+* Accessed the test web page using the instance public IP address.
+
+* Practiced stopping and starting an EC2 instance.
+
+* Terminated the temporary EC2 instance after completing the practice.

@@ -1,58 +1,67 @@
 ---
-title: "Worklog Tuần 12"
-date: 2024-01-01
-weight: 2
+title: "Worklog Tuần 11"
+date: 2026-06-22
+weight: 11
 chapter: false
-pre: " <b> 1.12 </b> "
+pre: " <b> 1.11. </b> "
 ---
+
 {{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+Lưu ý: Nội dung dưới đây chỉ dùng để tham khảo, vui lòng không sao chép nguyên văn cho báo cáo của bạn.
 {{% /notice %}}
 
-### Mục tiêu tuần 12:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### Mục tiêu tuần 11:
+
+* Tìm hiểu mục đích và cách sử dụng cơ bản của AWS Command Line Interface.
+* Hiểu cách cài đặt AWS CLI, cấu hình profile, region và output format.
+* Thực hành chạy một số lệnh AWS CLI đơn giản với S3, IAM, VPC và EC2.
+
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Tìm hiểu mục đích của AWS CLI <br> - Xem các môi trường dòng lệnh được hỗ trợ như PowerShell và Command Prompt <br> - Phân biệt cơ bản giữa sử dụng AWS Console và AWS CLI | 22/06/2026 | 22/06/2026 | <https://000011.awsstudygroup.com/> |
+| 3 | - Cài đặt AWS CLI trên máy tính cá nhân <br> - Kiểm tra phiên bản AWS CLI đã cài đặt <br> - Cấu hình CLI profile cơ bản với region và output format <br> - Chạy lệnh để xác minh AWS identity hiện tại | 23/06/2026 | 23/06/2026 | <https://000011.awsstudygroup.com/3-install-aws-cli/> |
+| 4 | - Chạy các lệnh đơn giản để liệt kê tài nguyên AWS hiện có <br> - Thực hành xem S3 bucket và object <br> - Kiểm tra kết quả lệnh ở định dạng JSON và table | 24/06/2026 | 24/06/2026 | <https://000011.awsstudygroup.com/4-view-resource-via-cli/> <br> <https://000011.awsstudygroup.com/5-aws-cli-with-amazon-s3/> |
+| 5 | - Thực hành xem thông tin IAM cơ bản bằng AWS CLI <br> - Liệt kê VPC, subnet và Security Group hiện có <br> - Tìm hiểu cấu trúc của AWS CLI command và parameter | 25/06/2026 | 25/06/2026 | <https://000011.awsstudygroup.com/7-aws-cli-with-iam/> <br> <https://000011.awsstudygroup.com/8-aws-cli-with-vpc/> |
+| 6 | - Xem lệnh cơ bản dùng để tạo EC2 instance <br> - Chạy các lệnh đơn giản để xem EC2 instance và kiểm tra trạng thái <br> - Tìm hiểu một số lỗi AWS CLI thường gặp và cách xử lý <br> - Xóa các tài nguyên tạm thời đã tạo trong quá trình thực hành | 26/06/2026 | 26/06/2026 | <https://000011.awsstudygroup.com/9-creating-ec2-using-aws-cli/> <br> <https://000011.awsstudygroup.com/10-troubleshooting/> <br> <https://000011.awsstudygroup.com/11-clean-up-resources/> |
 
 
-### Kết quả đạt được tuần 12:
+### Kết quả đạt được tuần 11:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hiểu mục đích cơ bản của AWS CLI.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Biết AWS CLI có thể được sử dụng từ:
+  * Windows PowerShell
+  * Command Prompt
+  * Linux hoặc macOS shell
+  * Amazon EC2 thông qua SSH hoặc Systems Manager
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Cài đặt AWS CLI và kiểm tra phiên bản.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Cấu hình AWS CLI profile cơ bản.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Biết ý nghĩa cơ bản của:
+  * Access key
+  * Secret access key
+  * Default region
+  * Output format
+  * Named profile
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Xác minh AWS identity hiện tại bằng lệnh CLI.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Chạy các lệnh đơn giản để liệt kê tài nguyên S3.
 
+* Xem kết quả lệnh ở định dạng JSON và table.
 
+* Sử dụng các lệnh cơ bản để xem thông tin IAM và VPC.
+
+* Liệt kê VPC, subnet và Security Group.
+
+* Xem các lệnh mô tả EC2 instance và kiểm tra trạng thái.
+
+* Tìm hiểu một số bước xử lý lỗi AWS CLI cơ bản.
+
+* Xóa các tài nguyên tạm thời sau khi hoàn thành thực hành.

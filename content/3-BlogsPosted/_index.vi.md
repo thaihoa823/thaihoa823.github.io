@@ -6,17 +6,11 @@ chapter: false
 pre: " <b> 3. </b> "
 ---
 
-{{% notice warning %}}  
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+###  [Blog 1 - TỐI ƯU HÓA HÌNH ẢNH HIỆU QUẢ VỚI AMAZON CLOUDFRONT VÀ AWS LAMBDA](3.1-Blog1/)
+Blog này giới thiệu giải pháp serverless tự động xử lý và tối ưu hóa hình ảnh thông qua sự kết hợp của Amazon CloudFront, AWS Lambda và Amazon S3. Hệ thống chỉ lưu trữ ảnh gốc chất lượng cao và tự động thay đổi kích thước, chuyển đổi định dạng (on-the-fly) theo yêu cầu của người dùng, giúp tăng tốc độ tải trang, nâng cao trải nghiệm người dùng và tiết kiệm tối đa chi phí.
 
-Tại đây sẽ là phần liệt kê, giới thiệu các blogs mà các bạn đã đăng trên [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj). Ví dụ:
+###  [Blog 2 - GIẢI PHÁP XỬ LÝ HÌNH ẢNH DYNAMIC TRÊN AWS VỚI AMAZON SAGEMAKER VÀ AMAZON BEDROCK](3.2-Blog2/)
+Blog này giới thiệu kiến trúc lai (hybrid) kết hợp giữa Amazon SageMaker Multi-Model Endpoints (MME) và Amazon Bedrock để xây dựng các công cụ hỗ trợ sáng tạo bằng Generative AI, tiêu biểu là tính năng xóa vật thể thông minh (Inpaint Eraser) và chỉnh sửa ảnh bằng văn bản (Inpainting & Outpainting), giúp tối ưu hóa chi phí hạ tầng và hiệu năng vận hành.
 
-###  [Blog 1 - SESSION POLICIES TRONG AMAZON EKS POD IDENTITY](3.1-Blog1/)
-Blog này giới thiệu Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
-
-###  [Blog 2 - ...](3.2-Blog2/)
-Blog này giới thiệu Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
-
-###  [Blog 3 - ...](3.3-Blog3/)
-Blog này giới thiệu Amazon EKS Pod Identity vừa bổ sung tính năng session policies, cho phép bạn thu hẹp quyền IAM một cách linh hoạt và chính xác cho từng pod mà không cần tạo thêm nhiều IAM roles riêng biệt. Đây là bước tiến quan trọng giúp áp dụng nguyên tắc least privilege hiệu quả hơn trong môi trường Kubernetes quy mô lớn.
+###  [Blog 3 - VÌ SAO KHÔNG NÊN MỞ SSH PORT 22 CHO EC2? TÌM HIỂU AWS SYSTEMS MANAGER SESSION MANAGER](3.3-Blog3/)
+Blog này giải thích những rủi ro bảo mật và hạn chế của phương pháp mở port 22 truyền thống để SSH vào EC2, đồng thời giới thiệu giải pháp thay thế an toàn hơn - AWS Systems Manager Session Manager, giúp quản lý và truy cập instance tập trung thông qua IAM mà không cần mở inbound port hay quản lý SSH keys.

@@ -1,58 +1,59 @@
 ---
 title: "Worklog Tuần 6"
-date: 2024-01-01
-weight: 1
+date: 2026-05-18
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
+
 {{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+Lưu ý: Nội dung dưới đây chỉ dùng để tham khảo, vui lòng không sao chép nguyên văn cho báo cáo của bạn.
 {{% /notice %}}
 
 
 ### Mục tiêu tuần 6:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu các khái niệm cơ bản về Elastic Load Balancing và EC2 Auto Scaling.
+* Hiểu Launch Template, Target Group và Application Load Balancer.
+* Thực hành tạo một môi trường web server có khả năng mở rộng đơn giản.
+
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Tìm hiểu mục đích của Elastic Load Balancing và EC2 Auto Scaling <br> - Tìm hiểu vai trò cơ bản của Load Balancer, Target Group, Launch Template và Auto Scaling Group | 18/05/2026 | 18/05/2026 | <https://000006.awsstudygroup.com/> |
+| 3 | - Tạo Launch Template cho một Amazon Linux EC2 instance nhỏ <br> - Thêm user data script đơn giản để cài đặt web server <br> - Chọn Security Group và key pair cần thiết | 19/05/2026 | 19/05/2026 | <https://000006.awsstudygroup.com/2-create-launch-template/> |
+| 4 | - Tạo Target Group cho các EC2 instance <br> - Cấu hình health check cơ bản <br> - Tạo Application Load Balancer trong public subnet <br> - Kết nối listener của Load Balancer với Target Group | 20/05/2026 | 20/05/2026 | <https://000006.awsstudygroup.com/3-create-target-group/> <br> <https://000006.awsstudygroup.com/4-create-load-balancer/> |
+| 5 | - Tạo Auto Scaling Group bằng Launch Template <br> - Thiết lập số lượng instance tối thiểu, mong muốn và tối đa <br> - Gắn Auto Scaling Group với Target Group <br> - Kiểm tra trạng thái của các EC2 instance | 21/05/2026 | 21/05/2026 | <https://000006.awsstudygroup.com/5-create-auto-scaling-group/> |
+| 6 | - Mở DNS name của Load Balancer và kiểm tra trang web <br> - Xem các CloudWatch metric cơ bản của Auto Scaling Group <br> - Thay đổi desired capacity và quan sát số lượng instance <br> - Xóa Auto Scaling Group, Load Balancer, Target Group và Launch Template sau khi thực hành | 22/05/2026 | 22/05/2026 | <https://000006.awsstudygroup.com/6-test-auto-scaling/> <br> <https://000006.awsstudygroup.com/7-clean-up/> |
 
 
 ### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hiểu mục đích cơ bản của Elastic Load Balancing và EC2 Auto Scaling.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Biết ý nghĩa cơ bản của:
+  * Launch Template
+  * Target Group
+  * Health Check
+  * Application Load Balancer
+  * Auto Scaling Group
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Tạo Launch Template cho Amazon Linux EC2 instance.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Sử dụng user data script đơn giản để cài đặt web server.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Tạo Target Group và cấu hình health check cơ bản.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Tạo Application Load Balancer và kết nối với Target Group.
 
+* Tạo Auto Scaling Group với các thiết lập minimum, desired và maximum capacity.
 
+* Kiểm tra trạng thái của EC2 instance trong Target Group.
+
+* Truy cập trang web thử nghiệm thông qua DNS name của Load Balancer.
+
+* Thay đổi desired capacity và quan sát số lượng EC2 instance.
+
+* Xóa các tài nguyên mở rộng và cân bằng tải tạm thời sau khi hoàn thành thực hành.

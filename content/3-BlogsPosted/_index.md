@@ -1,22 +1,18 @@
 ---
 title: "Blogs Posted"
-date: 2024-01-01
+date: 2026-07-15
 weight: 3
 chapter: false
 pre: " <b> 3. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
-
 This section will list and introduce the blogs you have posted to [AWS Study Group](https://www.facebook.com/groups/awsstudygroupfcj). For example:
 
-###  [Blog 1 - SESSION POLICIES IN AMAZON EKS POD IDENTITY](3.1-Blog1/)
-This blog introduces the newly added session policies feature in Amazon EKS Pod Identity, which allows you to narrow IAM permissions flexibly and precisely for each pod without needing to create multiple separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+###  [Blog 1 - EFFICIENT IMAGE OPTIMIZATION WITH AMAZON CLOUDFRONT AND AWS LAMBDA](3.1-Blog1/)
+This blog introduces a serverless image optimization solution combining Amazon CloudFront, AWS Lambda, and Amazon S3. By storing only a high-quality original image and automatically resizing and converting formats on-the-fly based on user requests, the system accelerates page load speeds, improves user experience, and minimizes storage costs.
 
-###  [Blog 2 - ...](3.2-Blog2/)
-This blog introduces the newly added session policies feature in Amazon EKS Pod Identity, which allows you to narrow IAM permissions flexibly and precisely for each pod without needing to create multiple separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+###  [Blog 2 - DYNAMIC IMAGE PROCESSING ON AWS WITH AMAZON SAGEMAKER AND AMAZON BEDROCK](3.2-Blog2/)
+This blog discusses a hybrid architecture combining Amazon SageMaker Multi-Model Endpoints (MME) and Amazon Bedrock to build creative tools powered by Generative AI. It details the implementation of an intelligent object removal tool (Inpaint Eraser) and language-guided image editing (Inpainting & Outpainting) to optimize infrastructure costs and operational efficiency.
 
-###  [Blog 3 - ...](3.3-Blog3/)
-This blog introduces the newly added session policies feature in Amazon EKS Pod Identity, which allows you to narrow IAM permissions flexibly and precisely for each pod without needing to create multiple separate IAM roles. This is an important step forward that helps apply the principle of least privilege more effectively in large-scale Kubernetes environments.
+###  [Blog 3 - WHY YOU SHOULD NOT OPEN SSH PORT 22 FOR EC2? EXPLORING AWS SYSTEMS MANAGER SESSION MANAGER](3.3-Blog3/)
+This blog explains the security risks and limitations of the traditional approach of opening port 22 for SSH access to EC2, and introduces a more secure alternative - AWS Systems Manager Session Manager. It enables centralized access control via IAM without opening inbound ports or managing SSH keys.

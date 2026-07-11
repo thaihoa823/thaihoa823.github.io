@@ -1,57 +1,63 @@
 ---
 title: "Week 8 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-06-01
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
+
+{{% notice warning %}}
+Note: The following information is for reference purposes only. Please do not copy verbatim for your own report.
 {{% /notice %}}
 
 
 ### Week 8 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn the basic features of Amazon CloudWatch.
+* Understand CloudWatch Metrics, Logs, Alarms, and Dashboards.
+* Practice monitoring a simple EC2 instance and reviewing its log data.
+
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 2 | - Learn the purpose of Amazon CloudWatch <br> - Understand the basic differences between Metrics, Logs, Alarms, and Dashboards <br> - Review the CloudWatch console | 06/01/2026 | 06/01/2026 | <https://000008.awsstudygroup.com/> |
+| 3 | - Open the Metrics page in CloudWatch <br> - View basic EC2 metrics such as CPU utilization and network traffic <br> - Change the time range and graph display | 06/02/2026 | 06/02/2026 | <https://000008.awsstudygroup.com/2-cloudwatch-metrics/> |
+| 4 | - Review CloudWatch Log Groups and Log Streams <br> - Open available logs from an AWS resource <br> - Use CloudWatch Logs Insights to run a simple log query | 06/03/2026 | 06/03/2026 | <https://000008.awsstudygroup.com/3-cloudwatch-logs/> |
+| 5 | - Create a basic CloudWatch Alarm for EC2 CPU utilization <br> - Configure an alarm threshold <br> - Review the alarm states and notification settings | 06/04/2026 | 06/04/2026 | <https://000008.awsstudygroup.com/4-cloudwatch-alarm/> |
+| 6 | - Create a simple CloudWatch Dashboard <br> - Add an EC2 metric widget to the dashboard <br> - Review monitoring information and remove temporary alarms and dashboards after practice | 06/05/2026 | 06/05/2026 | <https://000008.awsstudygroup.com/5-cloudwatch-dashboard/> <br> <https://000008.awsstudygroup.com/6-clean-up/> |
 
 
 ### Week 8 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Understood the basic purpose of Amazon CloudWatch.
 
-* Successfully created and configured an AWS Free Tier account.
+* Learned the basic meaning of:
+  * CloudWatch Metrics
+  * CloudWatch Logs
+  * Log Group
+  * Log Stream
+  * CloudWatch Alarm
+  * CloudWatch Dashboard
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Viewed basic EC2 metrics in the CloudWatch console.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Checked CPU utilization and network traffic graphs.
 
-* Used AWS CLI to perform basic operations such as:
+* Reviewed available Log Groups and Log Streams.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Ran a simple query using CloudWatch Logs Insights.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Created a basic CloudWatch Alarm for EC2 CPU utilization.
+
+* Reviewed the main alarm states:
+  * OK
+  * In alarm
+  * Insufficient data
+
+* Created a simple CloudWatch Dashboard.
+
+* Added an EC2 metric widget to the dashboard.
+
+* Removed temporary alarms and dashboards after completing the practice.

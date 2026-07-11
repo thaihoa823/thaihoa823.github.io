@@ -1,59 +1,58 @@
 ---
 title: "Worklog Tuần 7"
-date: 2024-01-01
-weight: 1
+date: 2026-05-25
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
+
 {{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+Lưu ý: Nội dung dưới đây chỉ dùng để tham khảo, vui lòng không sao chép nguyên văn cho báo cáo của bạn.
 {{% /notice %}}
 
 
 ### Mục tiêu tuần 7:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu các tính năng cơ bản của AWS Billing and Cost Management.
+* Hiểu AWS Cost Explorer, mức sử dụng Free Tier và AWS Budgets.
+* Thực hành tạo ngân sách đơn giản và kiểm tra chi phí dịch vụ.
+
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Tìm hiểu mục đích của AWS Billing and Cost Management <br> - Xem Billing Dashboard <br> - Kiểm tra số dư, các khoản phí và mức sử dụng Free Tier hiện tại | 25/05/2026 | 25/05/2026 | <https://000007.awsstudygroup.com/> |
+| 3 | - Tìm hiểu mục đích cơ bản của AWS Cost Explorer <br> - Xem chi phí theo dịch vụ và thời gian <br> - Kiểm tra các dịch vụ AWS có thể phát sinh chi phí | 26/05/2026 | 26/05/2026 | <https://000007.awsstudygroup.com/2-cost-explorer/> |
+| 4 | - Tìm hiểu AWS Budgets <br> - Tạo monthly cost budget đơn giản <br> - Thiết lập mức ngân sách nhỏ để thực hành | 27/05/2026 | 27/05/2026 | <https://000007.awsstudygroup.com/3-create-budget/> |
+| 5 | - Cấu hình email notification cho ngân sách <br> - Thiết lập cảnh báo khi actual cost hoặc forecasted cost đạt ngưỡng đã chọn <br> - Kiểm tra trạng thái ngân sách trong AWS Console | 28/05/2026 | 28/05/2026 | <https://000007.awsstudygroup.com/3-create-budget/> |
+| 6 | - Kiểm tra chi phí của các tài nguyên đã tạo trong những tuần trước <br> - Kiểm tra EC2, RDS, Load Balancer và các tài nguyên còn hoạt động <br> - Xóa các tài nguyên không sử dụng có thể phát sinh chi phí <br> - Kiểm tra lại Billing Dashboard sau khi cleanup | 29/05/2026 | 29/05/2026 | <https://000007.awsstudygroup.com/4-cost-control/> |
 
 
 ### Kết quả đạt được tuần 7:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hiểu mục đích cơ bản của AWS Billing and Cost Management.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Biết cách kiểm tra:
+  * Chi phí hiện tại của tài khoản
+  * Mức sử dụng Free Tier
+  * Chi phí theo tháng
+  * Chi phí theo từng dịch vụ AWS
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Làm quen với AWS Billing Dashboard.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Sử dụng AWS Cost Explorer để xem thông tin chi phí cơ bản.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Xác định được một số tài nguyên AWS có thể phát sinh thêm chi phí.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Tạo monthly AWS Budget đơn giản.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Cấu hình email notification cho ngân sách.
 
+* Thiết lập ngưỡng cảnh báo cho actual cost hoặc forecasted cost.
 
+* Kiểm tra chi phí của các tài nguyên đã tạo trong các buổi thực hành trước.
+
+* Kiểm tra và xóa các tài nguyên AWS không còn sử dụng.
+
+* Hiểu tầm quan trọng của việc thường xuyên theo dõi mức sử dụng và chi phí AWS.

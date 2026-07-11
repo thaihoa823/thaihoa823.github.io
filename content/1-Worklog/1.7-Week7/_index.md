@@ -1,57 +1,58 @@
 ---
 title: "Week 7 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-25
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
+
+{{% notice warning %}}
+Note: The following information is for reference purposes only. Please do not copy verbatim for your own report.
 {{% /notice %}}
 
 
 ### Week 7 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn the basic features of AWS Billing and Cost Management.
+* Understand AWS Cost Explorer, Free Tier usage, and AWS Budgets.
+* Practice creating a simple budget and checking service costs.
+
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 2 | - Learn the purpose of AWS Billing and Cost Management <br> - Review the Billing Dashboard <br> - Check the current account balance, charges, and Free Tier usage | 05/25/2026 | 05/25/2026 | <https://000007.awsstudygroup.com/> |
+| 3 | - Learn the basic purpose of AWS Cost Explorer <br> - View costs by service and date <br> - Review which AWS services may generate charges | 05/26/2026 | 05/26/2026 | <https://000007.awsstudygroup.com/2-cost-explorer/> |
+| 4 | - Learn about AWS Budgets <br> - Create a simple monthly cost budget <br> - Set a small budget amount for practice | 05/27/2026 | 05/27/2026 | <https://000007.awsstudygroup.com/3-create-budget/> |
+| 5 | - Configure an email notification for the budget <br> - Set an alert when actual or forecasted costs reach the selected threshold <br> - Review the budget status in the AWS Console | 05/28/2026 | 05/28/2026 | <https://000007.awsstudygroup.com/3-create-budget/> |
+| 6 | - Review the costs of resources created in previous weeks <br> - Check for running EC2, RDS, Load Balancer, and other resources <br> - Delete unused resources that may generate charges <br> - Review the Billing Dashboard again after cleanup | 05/29/2026 | 05/29/2026 | <https://000007.awsstudygroup.com/4-cost-control/> |
 
 
 ### Week 7 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Understood the basic purpose of AWS Billing and Cost Management.
 
-* Successfully created and configured an AWS Free Tier account.
+* Learned how to check:
+  * Current account charges
+  * Free Tier usage
+  * Monthly costs
+  * Costs by AWS service
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Became familiar with the AWS Billing Dashboard.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Used AWS Cost Explorer to view basic cost information.
 
-* Used AWS CLI to perform basic operations such as:
+* Identified several AWS resources that may generate additional charges.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Created a simple monthly AWS Budget.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Configured an email notification for the budget.
+
+* Set a cost threshold for actual or forecasted spending.
+
+* Reviewed the cost of resources created during previous practice sessions.
+
+* Checked and deleted unused AWS resources.
+
+* Understood the importance of regularly monitoring AWS usage and costs.

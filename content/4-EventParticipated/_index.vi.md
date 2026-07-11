@@ -1,46 +1,49 @@
 ---
-title: "Các events đã tham gia"
-date: 2024-01-01
+title: "Các sự kiện đã tham gia"
+date: 2026-05-09
 weight: 4
 chapter: false
 pre: " <b> 4. </b> "
 ---
 
 {{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+Lưu ý: Nội dung dưới đây chỉ dùng để tham khảo, vui lòng không sao chép nguyên văn vào báo cáo của bạn.
 {{% /notice %}}
 
-> Trong phần này, các bạn cần liệt kê và mô tả chi tiết các sự kiện (event) mà mình đã tham gia trong suốt quá trình thực tập hoặc làm việc. 
-> 
-> Mỗi sự kiện nên được trình bày theo định dạng Event 1, Event 2, Event 3…, kèm theo các thông tin:
-> * Tên sự kiện
-> * Thời gian tổ chức
-> * Địa điểm (nếu có)
-> * Vai trò của bạn trong sự kiện (người tham dự, hỗ trợ tổ chức, diễn giả, v.v.)
-> * Mô tả ngắn gọn nội dung và hoạt động chính trong sự kiện
-> * Kết quả hoặc giá trị đạt được (bài học, kỹ năng mới, đóng góp cho nhóm/dự án)
-> * Việc liệt kê này giúp thể hiện rõ sự tham gia thực tế của bạn, cũng như các kỹ năng mềm và kinh nghiệm bạn đã tích lũy qua từng sự kiện.
+> Phần này trình bày các sự kiện mà tôi đã tham gia trong thời gian thực tập.
+>
+> Mỗi sự kiện bao gồm tên sự kiện, thời gian, địa điểm, vai trò tham gia, các nội dung chính và những kiến thức, kinh nghiệm mà tôi đã tiếp thu.
 
+Trong thời gian thực tập, tôi đã tham gia hai sự kiện cộng đồng liên quan đến điện toán đám mây, trí tuệ nhân tạo, an ninh mạng, kỹ năng học tập và định hướng nghề nghiệp trong lĩnh vực công nghệ thông tin. Các sự kiện này giúp tôi mở rộng kiến thức kỹ thuật, cải thiện phương pháp học tập và hiểu rõ hơn về những hướng phát triển nghề nghiệp trong tương lai.
 
-Trong quá trình thực tập, em đã tham gia 2 events, với mỗi event là một trải nghiệm đáng nhớ với những kiến thức mới, hay và bổ ích, cùng với đó là nhứng món quà và những khoảnh khắc rất tuyệt vời.
+### [Sự kiện 1](4.1-Event1/)
 
-### [Event 1](4.1-Event1/)
-&emsp;**Tên sự kiện:** GenAI-powered App-DB Modernization workshop
+&emsp;**Tên sự kiện:** First Cloud AI Journey Meetup – Cloud, Security, AI, Teamwork và định hướng nghề nghiệp IT  
 
-&emsp;**Thời gian:** 09:00 ngày 13/08/2025
+&emsp;**Ngày tổ chức:** 06/06/2026  
 
-&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
+&emsp;**Thời gian:** Sẽ cập nhật sau  
 
-&emsp;**Vai trò trong sự kiện:** Người tham dự 
+&emsp;**Địa điểm:** Sẽ cập nhật sau  
 
+&emsp;**Vai trò:** Người tham dự  
 
+&emsp;**Mô tả ngắn:** Sự kiện gồm sáu bài trình bày về công nghệ Docker, hệ thống phát hiện xâm nhập mạng sử dụng Machine Learning trên AWS, ứng dụng multiplayer sử dụng AWS WebSocket, kỹ năng làm việc nhóm hiệu quả, GraphRAG với Amazon Bedrock và Amazon Neptune, cùng lộ trình phát triển từ IT Helpdesk lên Senior System Administrator.  
 
-### [Event 2](4.2-Event2/)
-&emsp;**Tên sự kiện:** GenAI-powered App-DB Modernization workshop
+&emsp;**Giá trị đạt được:** Sự kiện giúp tôi có cái nhìn tổng quan hơn về kiến trúc đám mây, an ninh mạng, trí tuệ nhân tạo, ứng dụng serverless, kỹ năng làm việc nhóm và định hướng phát triển nghề nghiệp trong lĩnh vực IT.
 
-&emsp;**Thời gian:** 09:00 ngày 13/08/2025
+---
 
-&emsp;**Địa điểm:** Tầng 26, tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, thành phố Hồ Chí Minh
+### [Sự kiện 2](4.2-Event2/)
 
-&emsp;**Vai trò trong sự kiện:** Người tham dự 
+&emsp;**Tên sự kiện:** Kỹ năng học tập, ứng dụng AI, Prompt Engineering và chuẩn bị nghề nghiệp IT  
 
+&emsp;**Ngày và thời gian:** 09:00 – 12:00, ngày 09/05/2026  
+
+&emsp;**Địa điểm:** Tầng 26, Tòa nhà Bitexco, 02 Hải Triều, Phường Sài Gòn, Thành phố Hồ Chí Minh  
+
+&emsp;**Vai trò:** Người tham dự  
+
+&emsp;**Mô tả ngắn:** Sự kiện gồm các nội dung về xây dựng thói quen học tập bền vững, sử dụng công cụ AI để tạo sơ đồ và mô hình dữ liệu, chuẩn bị và phân phối CV, tìm hiểu yêu cầu tuyển dụng trong ngành IT và nâng cao chất lượng phản hồi của Large Language Model thông qua Prompt Engineering có cấu trúc.  
+
+&emsp;**Giá trị đạt được:** Sự kiện giúp tôi cải thiện phương pháp học tập, hiểu cách AI hỗ trợ việc học và công việc, thực hành viết prompt hiệu quả hơn và chuẩn bị kỹ hơn cho quá trình ứng tuyển thực tập hoặc việc làm.

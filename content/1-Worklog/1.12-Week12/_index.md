@@ -1,57 +1,64 @@
 ---
 title: "Week 12 Worklog"
-date: 2024-01-01
-weight: 2
+date: 2026-06-29
+weight: 12
 chapter: false
 pre: " <b> 1.12. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
+
+{{% notice warning %}}
+Note: The following information is for reference purposes only. Please do not copy verbatim for your own report.
 {{% /notice %}}
 
 
 ### Week 12 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn the basic purpose of AWS IAM Identity Center.
+* Understand centralized access management for multiple AWS accounts.
+* Practice creating users, groups, permission sets, and basic SSO access.
+
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 2 | - Learn the purpose of AWS IAM Identity Center <br> - Understand the basic relationship between AWS Organizations and IAM Identity Center <br> - Review users, groups, permission sets, and the AWS access portal | 06/29/2026 | 06/29/2026 | <https://000012.awsstudygroup.com/> |
+| 3 | - Review the AWS Organization and member account structure <br> - Create or review a simple Organizational Unit <br> - Check how member accounts are organized and accessed | 06/30/2026 | 06/30/2026 | <https://000012.awsstudygroup.com/1-prerequisite/> |
+| 4 | - Enable or open AWS IAM Identity Center <br> - Create a test user and group <br> - Add the test user to the selected group <br> - Review the AWS access portal URL | 07/01/2026 | 07/01/2026 | <https://000012.awsstudygroup.com/3-using-time-based-access-control/> |
+| 5 | - Create a basic permission set with limited access <br> - Assign the group and permission set to an AWS account <br> - Sign in through the AWS access portal and verify the assigned access | 07/02/2026 | 07/02/2026 | <https://000012.awsstudygroup.com/3-using-time-based-access-control/> |
+| 6 | - Configure a simple AWS CLI SSO profile using IAM Identity Center <br> - Sign in with the AWS CLI and verify the current identity <br> - Review temporary credentials and session access <br> - Remove test users, groups, permission sets, and temporary resources after practice | 07/03/2026 | 07/03/2026 | <https://000012.awsstudygroup.com/2-aws-cli-access/> <br> <https://000012.awsstudygroup.com/6-clean-up/> |
 
 
 ### Week 12 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Understood the basic purpose of AWS IAM Identity Center.
 
-* Successfully created and configured an AWS Free Tier account.
+* Learned the basic meaning of:
+  * Centralized access management
+  * AWS access portal
+  * User
+  * Group
+  * Permission set
+  * Account assignment
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Reviewed the relationship between AWS Organizations and IAM Identity Center.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Reviewed a simple AWS Organization and member account structure.
 
-* Used AWS CLI to perform basic operations such as:
+* Created a test user and group in IAM Identity Center.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Added the test user to the selected group.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Created a basic permission set with limited permissions.
+
+* Assigned the group and permission set to an AWS account.
+
+* Signed in through the AWS access portal and checked the assigned access.
+
+* Configured a basic AWS CLI SSO profile.
+
+* Verified the current AWS identity after signing in with AWS CLI.
+
+* Understood that IAM Identity Center uses temporary session credentials.
+
+* Removed test identities, assignments, and temporary resources after completing the practice.

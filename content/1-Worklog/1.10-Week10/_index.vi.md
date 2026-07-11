@@ -1,59 +1,61 @@
 ---
 title: "Worklog Tuần 10"
-date: 2024-01-01
-weight: 2
+date: 2026-06-15
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
+
 {{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+Lưu ý: Nội dung dưới đây chỉ dùng để tham khảo, vui lòng không sao chép nguyên văn cho báo cáo của bạn.
 {{% /notice %}}
 
 
 ### Mục tiêu tuần 10:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu các khái niệm cơ bản về hybrid DNS.
+* Hiểu Route 53 Resolver inbound endpoint, outbound endpoint và resolver rule.
+* Thực hành kiểm tra kết nối DNS đơn giản giữa môi trường AWS và môi trường on-premises mô phỏng.
+
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - Tìm hiểu mục đích của Amazon Route 53 và Route 53 Resolver <br> - Hiểu ý tưởng cơ bản của hybrid DNS <br> - Tìm hiểu inbound endpoint, outbound endpoint và resolver rule | 15/06/2026 | 15/06/2026 | <https://000010.awsstudygroup.com/> |
+| 3 | - Xem kiến trúc của bài thực hành <br> - Tạo hoặc kiểm tra key pair và Security Group cần thiết <br> - Triển khai các tài nguyên VPC mẫu bằng CloudFormation template | 16/06/2026 | 16/06/2026 | <https://000010.awsstudygroup.com/2-preparation/> |
+| 4 | - Tìm hiểu môi trường AWS Managed Microsoft AD được dùng để mô phỏng hệ thống DNS on-premises <br> - Kiểm tra các thiết lập VPC, subnet và DNS <br> - Xác minh các tài nguyên cần thiết đã sẵn sàng | 17/06/2026 | 17/06/2026 | <https://000010.awsstudygroup.com/4-microsoft-ad-deployment/> |
+| 5 | - Tạo hoặc kiểm tra Route 53 Resolver outbound endpoint <br> - Tạo resolver forwarding rule đơn giản <br> - Gắn rule vào VPC được chọn | 18/06/2026 | 18/06/2026 | <https://000010.awsstudygroup.com/5-setuphyriddns/5.1-createoe/> <br> <https://000010.awsstudygroup.com/5-setuphyriddns/5.2-createroute53/> |
+| 6 | - Tạo hoặc kiểm tra Route 53 Resolver inbound endpoint <br> - Kiểm tra phân giải tên miền giữa môi trường AWS và môi trường on-premises mô phỏng <br> - Ghi lại kết quả kiểm tra <br> - Xóa các tài nguyên tạm thời sau khi thực hành | 19/06/2026 | 19/06/2026 | <https://000010.awsstudygroup.com/5-setuphyriddns/5.3-createie/> <br> <https://000010.awsstudygroup.com/5-setuphyriddns/5.4-test-results/> <br> <https://000010.awsstudygroup.com/6-clean-up-resources/> |
 
 
 ### Kết quả đạt được tuần 10:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hiểu mục đích cơ bản của hybrid DNS.
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Biết ý nghĩa cơ bản của:
+  * Route 53 Resolver
+  * Inbound endpoint
+  * Outbound endpoint
+  * Resolver rule
+  * DNS forwarding
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Tìm hiểu kiến trúc kết nối DNS giữa AWS và môi trường DNS on-premises mô phỏng.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Sử dụng CloudFormation template để tạo hoặc kiểm tra các tài nguyên mạng cần thiết.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Kiểm tra các thiết lập VPC, subnet, Security Group và DNS.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Hiểu cách outbound endpoint chuyển tiếp DNS query đến hệ thống DNS khác.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+* Tạo hoặc kiểm tra resolver forwarding rule đơn giản.
 
+* Gắn resolver rule vào VPC.
 
+* Hiểu cách inbound endpoint nhận DNS query từ hệ thống DNS bên ngoài.
+
+* Kiểm tra phân giải tên miền cơ bản giữa hai môi trường.
+
+* Ghi lại kết quả kiểm tra DNS.
+
+* Xóa các tài nguyên tạm thời sau khi hoàn thành thực hành.

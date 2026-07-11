@@ -1,57 +1,60 @@
 ---
 title: "Week 5 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-05-11
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
+
+{{% notice warning %}}
+Note: The following information is for reference purposes only. Please do not copy verbatim for your own report.
 {{% /notice %}}
 
 
 ### Week 5 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+* Learn the basic concepts of Amazon RDS.
+* Understand database engines, DB instances, subnet groups, and security settings.
+* Practice creating, connecting to, and removing a simple RDS database.
+
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --- | --- | --- | --- |
+| 2 | - Learn the purpose of Amazon RDS <br> - Review supported database engines such as MySQL and PostgreSQL <br> - Understand the basic difference between a self-managed database and a managed database | 05/11/2026 | 05/11/2026 | <https://000005.awsstudygroup.com/> |
+| 3 | - Review the VPC and subnets used for the database <br> - Create a DB subnet group <br> - Create a Security Group for the RDS database | 05/12/2026 | 05/12/2026 | <https://000005.awsstudygroup.com/2-prerequisite-steps/> |
+| 4 | - Create a small MySQL RDS database for practice <br> - Configure the database name, username, password, storage, and connectivity settings <br> - Wait for the database status to become available | 05/13/2026 | 05/13/2026 | <https://000005.awsstudygroup.com/4-create-rds-database-instance/> |
+| 5 | - Check the RDS endpoint and port <br> - Connect to the database from an EC2 instance or database client <br> - Create a simple database table and insert test data | 05/14/2026 | 05/14/2026 | <https://000005.awsstudygroup.com/5-application-deployment/> |
+| 6 | - Review basic RDS monitoring and backup settings <br> - Create a manual snapshot for practice <br> - Delete the temporary database, snapshot, and related resources after completing the practice | 05/15/2026 | 05/15/2026 | <https://000005.awsstudygroup.com/6-backup-and-restore/> <br> <https://000005.awsstudygroup.com/7-clean-up-resources/> |
 
 
 ### Week 5 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Understood the basic purpose of Amazon RDS.
 
-* Successfully created and configured an AWS Free Tier account.
+* Learned the basic meaning of:
+  * Database engine
+  * DB instance
+  * DB subnet group
+  * Database endpoint
+  * Security Group
+  * Snapshot
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Reviewed several database engines supported by Amazon RDS.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Created a DB subnet group and a basic Security Group.
 
-* Used AWS CLI to perform basic operations such as:
+* Created a small MySQL RDS database for practice.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Checked the database status, endpoint, and port.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+* Connected to the RDS database from an EC2 instance or database client.
+
+* Created a simple table and inserted test data.
+
+* Reviewed basic monitoring and backup settings.
+
+* Created a manual snapshot for practice.
+
+* Deleted the temporary database and related resources after completing the practice.

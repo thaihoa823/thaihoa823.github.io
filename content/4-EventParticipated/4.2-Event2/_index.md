@@ -121,6 +121,11 @@ Attending the **“GenAI-powered App-DB Modernization”** workshop was extremel
 - AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
 
 #### Some event photos
-*Add your event photos here*  
+*Add your event photos here* 
+![Event photo 1](/images/event-participated/event1-1.png)
+
+![Event photo 2](/images/event-participated/event1-2.png)
+
+![Event photo 3](/images/event-participated/event1-3.png)
 
 > Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
