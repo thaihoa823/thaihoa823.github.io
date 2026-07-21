@@ -6,74 +6,111 @@ chapter: false
 pre: " <b> 2. </b> "
 ---
 
-# Smart Image Platform  
-## A Comprehensive AWS Serverless & Event-Driven Solution for Smart Image Storage and Processing  
+# Smart Image Platform
+## Image storage and processing with an AWS Serverless and Event-Driven architecture
 
-### 1. Executive Summary  
-The **Smart Image Platform** is an advanced cloud solution engineered to automate image uploads, secure storage, dynamic compression, and AI-powered content analysis. By fully leveraging an **AWS Serverless** and **Event-Driven** architecture, the platform guarantees high availability, seamless auto-scaling, and optimal cost efficiency. The entire frontend interface and backend API layer are strictly protected at the edge, utilizing Amazon Cognito to enforce access control restricted to internal organizational accounts.
+### 1. Summary
 
-### 2. Problem Statement  
-* **Current Problem:** Traditional file management and image processing systems heavily struggle with resource elasticity when handling sudden spikes in user uploads. Executing image resizing, metadata extraction, and AI classification tags synchronously on legacy servers causes major bandwidth bottlenecks, exhausts compute hardware, and significantly inflates response latency for end-users.  
-* **Proposed Solution:** Build a fully asynchronous, decoupled cloud architecture orchestrated by native AWS event triggers. Users interact through a Web interface (React App) authenticated securely via Amazon Cognito. All incoming traffic is filtered at the perimeter by an AWS WAF firewall layered in front of Amazon API Gateway. Raw assets are stored in Amazon S3, instantly triggering downstream AWS Lambda pipelines: one computing branch handles image optimization and compression before pushing outputs to a separate destination bucket, while a parallel branch invokes Amazon Rekognition AI to analyze objects and write catalog indexes into Amazon DynamoDB asynchronously.  
-* **Benefits and Return on Investment (ROI):** Eliminates 100% of predictable monthly overhead tied to maintaining 24/7 dedicated compute hardware by embracing a strict Pay-as-you-go pricing model. The initial development and testing phases yield an approximate 80% reduction in infrastructure costs by operating comfortably within the boundaries of the AWS Free Tier. Automating the image tagging process with AI eliminates manual asset indexing labor entirely while significantly improving data metadata catalog accuracy.
+**Smart Image Platform** supports image upload, storage, processing, and content analysis on AWS. It uses serverless and event-driven patterns to separate interactive requests from image-processing tasks that take longer to complete.
 
-### 3. Solution Architecture  
-The platform orchestrates Serverless cloud services to streamline chronological data flows, as illustrated in the system execution layout below:
+The React application is deployed with AWS Amplify Hosting. Amazon Cognito handles registration, email verification, sign-in, and authorization. API Gateway, Lambda, Amazon S3, DynamoDB Streams, and Amazon Rekognition form the main processing flow. AWS WAF protects the REST API, while CloudWatch, X-Ray, and Amazon SNS provide operational visibility and alerts.
+
+The backend infrastructure is defined with AWS CDK so that configuration can be managed and deployed consistently across environments. The current implementation uses S3 presigned URLs for private image upload and retrieval. A dedicated CloudFront distribution for the processed bucket is not enabled.
+
+### 2. Problem and Solution
+
+* **Problem:** When resizing, metadata extraction, and AI analysis run synchronously on one server, response time can increase with image size and request volume. Operating that server also requires capacity planning, scaling, patching, and monitoring.
+* **Solution:** Combine synchronous and asynchronous processing. Authentication, API calls, and presigned URL requests are synchronous. After an image is uploaded directly to the raw S3 bucket, resizing, thumbnail generation, metadata extraction, and Rekognition analysis run asynchronously through S3 Event Notifications, Lambda, and DynamoDB Streams.
+* **Benefits:** Reduce the amount of image data passing through the backend API, move expensive processing out of the user's request path, and consume compute resources only when events occur. Classification and moderation are automated, but Rekognition results remain supporting data rather than a complete replacement for human review.
+
+### 3. Solution Architecture
+
+The following diagram shows the core processing flow. Supporting components such as the SQS dead-letter queue, CloudWatch, X-Ray, and SNS are omitted to keep it readable.
 
 ![Smart Image Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
 
-* **Detailed Execution Flow:**
-  1. The user accesses and interacts with the web interface via a **Browser (React App)**.
-  2. The client application dispatches authentication credentials to **Amazon Cognito**. Upon successful authentication, the browser receives a valid identity token (ID Token).
-  3. The frontend application attaches the token to outbound API requests, passing traffic through the **AWS WAF** perimeter shield.
-  4. AWS WAF evaluates the request against core safety rule sets (AWSManagedRulesCommonRuleSet) and rate limiting (RateLimitRule) to block malicious traffic and API spam before routing valid payloads to **Amazon API Gateway**. The API Gateway uses a Cognito Authorizer to cross-check operational permissions.
-  5. API Gateway triggers the **AWS Lambda (API Handler Lambda)** to execute backend route routing, validate user quotas against the **DynamoDB UserQuotas** table, manage user profile updates synchronizing back to Cognito User Pool attributes, and safely generate an S3 Presigned PUT URL.
-  6. The client browser uses the time-bound Presigned URL to PUT the raw binary image stream directly into the **S3 Bucket (Raw Store)** under the `users/<userId>/` prefix, completely offloading network bandwidth from the core API layer.
-  7. The object creation event under the `users/` prefix inside the raw **S3 Bucket** instantly emits a notification that triggers the asynchronous **AWS Lambda (Image Processor Lambda)**.
-  8. The Image Processor Lambda handles two processing jobs concurrently:
-     * **8.a:** Compresses, optimizes, and resizes the image asset using the `Sharp` library before writing the finalized output securely into the designated **processed S3 Bucket**.
-     * **8.b:** Extracts fundamental image file attributes (dimensions, format, byte size, creation timestamp, EXIF metadata) and populates an initial record index with status `PROCESSED` inside **Amazon DynamoDB**.
-  9. The generation or modification of item attributes (switching status to `PROCESSED`) within the database automatically emits an event that streams down to trigger the **AWS Lambda (AI Analyzer Lambda)** via DynamoDB Streams.
-  10. This Lambda function interacts directly with **Amazon Rekognition** to execute object detection, automatic tag classification, and content moderation checks. It then writes the computed AI labels and moderation status back into the **DynamoDB** table records, updating the final image status to `COMPLETED` (or `FLAGGED` for moderation review).
-  11. **Secure Distribution:** When users request to view or download images, the frontend requests time-bound **S3 Presigned GET URLs** via the API Gateway, letting the API Handler securely authorize and distribute short-term URLs for both original files and thumbnails directly from the private buckets.
-  12. **Admin Moderation Queue:** Admins check flagged assets using the admin endpoints which query the DynamoDB table via a dedicated moderation index (`GSI2-ModerationIndex`) and can approve/reject items.
+* **Processing flow:**
 
-### 4. Technical Implementation  
-* **Deployment Phases:**
-  1. *Research & Architecture Design:* Map out complete application workflows, research programmatic implementation models for S3 Presigned URLs, and layout decoupled event-driven service blueprints (1 Month).
-  2. *Cost Projection & Security Perimeter Analysis:* Utilize the AWS Pricing Calculator to map budget thresholds and formulate precise AWS Budget Alerts to mitigate financial risks stemming from programming defects like infinite computing loops (Month 1).
-  3. *Core Services Development & Configuration:* Provision default virtual networks, build NoSQL DynamoDB table structures with global secondary indexes, write Lambda runtime code handling target image processing libraries (bundling `Sharp` for `linux-arm64` runtime), and integrate Amazon Rekognition SDK modules (Month 2).
-  4. *Frontend Integration, Stress Testing, & Deployment:* Connect the finalized React App user interface, run heavy end-to-end load tests validating concurrent upload streams, purge loose testing assets, and migrate configurations to a production-ready state (Month 3).
+  1. Users access the React application deployed with **AWS Amplify Hosting**.
+  2. The application uses an **Amazon Cognito User Pool** for registration, email verification, and sign-in. After successful authentication, the client receives JSON Web Tokens for API requests.
+  3. The client sends a request with its token to **Amazon API Gateway**. **AWS WAF** evaluates the request before it reaches the API, and the API Gateway Cognito authorizer verifies the token before Lambda can be invoked.
+  4. The **API Handler Lambda** implements CRUD operations, profile management, and search. For an image upload, it creates an S3 presigned PUT URL and an initial image record in **DynamoDB**.
+  5. The browser uses the presigned URL to upload the image directly to the **raw S3 bucket**, without sending the file through the API Handler.
+  6. An `ObjectCreated` event in the raw bucket invokes the **Image Processor Lambda**. A dead-letter queue retains asynchronous events that still fail after the configured retry attempts.
+  7. The Image Processor reads the image, extracts metadata, and creates thumbnail and resized variants with Sharp. It stores the results in the **processed S3 bucket** and updates the image record in DynamoDB.
+  8. **DynamoDB Streams** delivers the table change to the **AI Analyzer Lambda**.
+  9. The AI Analyzer calls **Amazon Rekognition** for label detection and content moderation, then writes the results back to the image table.
+  10. When an image is displayed or downloaded, the API Handler creates a time-limited **S3 presigned GET URL** for the private object. CloudFront for the processed bucket is an optional future enhancement and is not enabled in the current Storage stack.
+  11. The system uses three DynamoDB tables for images, user profiles, and user quotas. CloudWatch Logs, metrics, alarms, X-Ray, and SNS provide observability and notifications.
 
-* **Technical Requirements:**
-  * *Frontend:* Single Page Application (SPA) compiled utilizing **React.js + Vite**, integrating the Amazon Cognito Auth SDK to safely validate sessions and cryptographically parse identity tokens. Network request layers utilize Axios clients to directly push binary multi-part file streams over S3 Presigned targets.
-  * *Backend & Cloud Infrastructure:* AWS Lambda runtimes built on Node.js 20.x utilizing TypeScript. Database storage utilizes DynamoDB set to On-Demand capacity allocation with separate tables for metadata (`Images`), upload tracking (`UserQuotas`), and profile details (`UserProfiles`). S3 raw bucket features standard transition to Infrequent Access (90 days), Glacier transition (365 days), and old version deletion (30 days) to optimize costs.
+### 4. Technical Implementation
 
-### 5. Roadmap & Implementation Milestones  
-* **Month 1:** Complete foundational cloud architecture research tracks; register official AWS developer environments and implement base security configurations (IAM permissions boundaries, Budget alerts).
-* **Month 2:** Finalize system technical dependency designs; establish target Amazon API Gateway routing rules, set up DynamoDB tables, and complete production runtime code handling back-end Lambda processing tasks.
-* **Month 3:** Build out the React.js client frontend dashboards; initiate thorough end-to-end system testing, populate code repositories with clean engineering documentation on GitHub, and complete the final project handover.
+* **Implementation phases:**
 
-### 6. Budget Estimation  
-Financial budgets are estimated against typical MVP pilot testing workloads managing fewer than 5,000 processed images per month, fitting almost entirely within the AWS Free Tier parameters (Permanent and 12-Month introductory terms):
+  1. *Research and design:* Analyze the upload flow, S3 presigned URLs, event-driven processing, authentication, and data model.
+  2. *Infrastructure:* Define CDK stacks for Storage, Database, Authentication, API, Monitoring, and Amplify Hosting; configure AWS Budgets for cost tracking.
+  3. *Application development:* Build the frontend, API Handler, Image Processor, and AI Analyzer; integrate Rekognition, Cognito, and storage services.
+  4. *Testing and deployment:* Run unit and end-to-end tests for registration, upload, image processing, and AI analysis; deploy staging and production environments. High-load capacity must be evaluated separately before publishing concurrent-user claims.
 
-* **AWS Lambda:** 0.00 USD/month (Safely below the 1 million free monthly requests tier).
-* **Amazon S3:** ~0.05 USD/month (Allocated for multi-tier raw and optimized image storage, under the 5 GB threshold).
-* **Amazon DynamoDB:** 0.00 USD/month (Configured in On-Demand allocation mode, utilizing under 25 GB of free static data allocation).
-* **Amazon API Gateway:** 0.00 USD/month (Under the 1 million free introductory REST API call bracket).
-* **Amazon Rekognition:** 0.00 USD/month (Operating within the 5,000 free monthly images tier provided by AWS Free Tier).
-* **AWS WAF:** ~5.00 USD/month (Flat-rate base charge per Web ACL and basic inspection rules. *Note: Can be safely turned off during local sandbox testing phases to achieve zero-cost overhead*).
+* **Implemented technology:**
 
-*Total Projected Costs:* ~0.00 USD/month (Operating purely inside Free Tier allocations with AWS WAF disabled during sandbox tests) OR ~5.05 USD/month (Operating with edge application firewall shields enabled).
+  * *Frontend:* React 19 and Vite; `amazon-cognito-identity-js` for Cognito sessions; Zustand for state; native `fetch` for REST requests and presigned image transfers.
+  * *Backend:* TypeScript on Node.js Lambda; AWS SDK for JavaScript v3; Sharp and `exif-reader` for image and metadata processing.
+  * *Infrastructure:* AWS CDK in TypeScript; DynamoDB On-Demand with Point-in-Time Recovery; two private S3 buckets with Block Public Access; API Gateway REST API; Cognito User Pool; SQS dead-letter queue; WAF; CloudWatch; X-Ray; and SNS.
+  * *Data protection:* The client receives a time-limited presigned URL for a specific operation. Lambda functions use IAM roles scoped to the required actions, and S3 public access is blocked.
 
-### 7. Risk Management  
-* **Risk of Infinite Computing Loops:** A processing Lambda writes optimized assets back into the monitored raw ingestion directory, triggering itself endlessly and depleting available cloud budget credits rapidly.
-  * *Mitigation Strategy:* Enforce hard separation lines between media storage zones by provisioning two distinct buckets: a raw input store (`raw-images-bucket`) that holds the exclusive trigger connection to compute functions, and an output store (`processed-images-bucket`) completely detached from automated backend execution triggers. Additionally, S3 notifications are restricted to the `users/` prefix.
-* **Denial of Service (DDoS) or API Ingestion Spam:** Malicious external scripts flooding ingress gateways with concurrent fake file requests to artificially drive up Lambda resource executions.
-  * *Mitigation Strategy:* Enforce strict edge rate limiting rules via AWS WAF (configured with a flat `RateLimitRule` of 2,000 requests per 5 minutes per IP) at the perimeter and deploy throttling caps (Request per second limits) on specialized target API keys handled by the Amazon API Gateway.
-* **Unprotected Public S3 Bucket Data Leakage:** User images exposed publicly due to loose access rules.
-  * *Mitigation Strategy:* Enable global Block Public Access attributes on all S3 Buckets. Raw and processed S3 objects are only accessed via temporary S3 Presigned GET URLs generated by the authorized Lambda backend, preventing any direct public access paths.
+### 5. Roadmap and Milestones
 
-### 8. Expected Outcomes  
-* **Technical Performance:** The client interface achieves ultra-low response latency indicators because computationally taxing media resizing steps and multi-label AI analysis tasks are handled asynchronously downstream.
-* **Long-Term Enterprise Value:** Establishes a modular cloud platform blueprint built on Clean Code practices. The system can scale seamlessly from a handful of internal users up to thousands of concurrent transactions without requiring any manual server hardware tuning or management intervention.
+* **Phase 1:** Complete foundational study of AWS, IAM, Budgets, S3, Lambda, DynamoDB, API Gateway, Cognito, and related serverless patterns.
+* **Phase 2:** Complete the architecture, CDK source code, and backend image-processing chain from S3 to Rekognition.
+* **Phase 3:** Integrate the frontend, authentication, authorization, image library, and administration features; add WAF, logging, alarms, and SNS notifications.
+* **Phase 4:** Run end-to-end tests, deploy staging and production, connect the domain, and complete the workshop documentation and demo video.
+
+### 6. Budget Estimate
+
+The deployment account was created after July 15, 2025 and uses the new AWS Free Tier program. It receives USD 100 in credits at registration and may earn up to an additional USD 100 by completing activities specified by AWS. The Free Plan ends after at most six months or when credits are depleted, whichever occurs first. Unused credits can continue to apply after an upgrade to the Paid Plan but expire 12 months after account creation.
+
+The following estimate assumes `ap-southeast-1`, up to 5,000 new images per month, an average original size of 3 MB, and a combined 1 MB for the thumbnail and resized variants. Each image is analyzed once with DetectLabels and once with DetectModerationLabels. Frontend and API traffic remain at MVP scale, and no dedicated CloudFront distribution is enabled for the processed bucket.
+
+| Component | Estimate after credits expire | Basis |
+|---|---:|---|
+| AWS WAF | USD 7–7.10/month | One Web ACL, one AWS Managed Rules group, one rate-based rule, and fewer than one million inspected requests |
+| Amazon Rekognition | USD 1–2 at 1,000 images; USD 9–10 at 5,000 images | Two Group 2 APIs are called for every image; current free usage applies according to account eligibility |
+| Amazon S3 | USD 0.50–1.50 in the first month | About 20 GB of new data at 5,000 images plus requests; accumulated storage grows over time and raw objects later transition to IA/Glacier |
+| AWS Lambda | USD 0–1/month | Four functions; the Image Processor uses 1,536 MB and duration varies with image size |
+| API Gateway and DynamoDB | USD 0–1/month | MVP traffic, three On-Demand tables, DynamoDB Streams, and PITR |
+| CloudWatch, X-Ray, SNS, and SQS | USD 0.20–4/month | 14–30 day log retention, 12 standard alarms, one dashboard, traces, two DLQs, and email notifications |
+| Amplify Hosting | USD 0–1/month | A small SPA with low build frequency and data transfer |
+| Amazon Cognito | USD 0/month | MVP monthly active users remain below the applicable free allowance |
+
+* **While Free Plan credits remain:** service costs are still recorded but offset by credits. The expected amount charged is approximately **USD 0/month**, provided the credits have not been depleted and traffic remains within the assumptions.
+* **After credits expire:** approximately **USD 10–14/month** at up to 1,000 new images, or **USD 18–25/month** near 5,000 new images. These are planning ranges, not fixed prices.
+* **Storage growth:** the raw bucket transitions to Standard-IA after 90 days and Glacier after 365 days, but the processed bucket has no expiration rule. Accumulated storage must be monitored separately.
+* **Custom domain:** the domain and DNS are managed by a provider outside AWS. The project does not create a Route 53 hosted zone, so Route 53 and domain registration fees are excluded from this AWS estimate.
+
+Actual charges must be verified with AWS Pricing Calculator, Billing, and Cost Explorer for the deployment account. The estimate excludes taxes, third-party domain fees, service-quota increases, and abnormal traffic.
+
+References: [AWS Free Tier](https://aws.amazon.com/free/), [AWS WAF Pricing](https://aws.amazon.com/waf/pricing/), [Amazon Rekognition Pricing](https://aws.amazon.com/rekognition/pricing/), and [Amazon API Gateway Pricing](https://aws.amazon.com/api-gateway/pricing/).
+
+### 7. Risk Assessment
+
+* **S3 processing loop:** If Lambda writes its result to the same location that produces its trigger, the function can repeatedly invoke itself.
+  * *Mitigation:* Use separate raw and processed buckets. Only the raw bucket sends S3 notifications to the Image Processor, and the trigger is limited to the `users/` prefix.
+* **Asynchronous processing failure:** A Lambda event can fail because of an invalid file, timeout, or dependent service error.
+  * *Mitigation:* Configure retries and an SQS dead-letter queue, with CloudWatch alarms and SNS error notifications.
+* **API spam or abnormal traffic:** Repeated requests can increase API Gateway and Lambda invocations.
+  * *Mitigation:* WAF applies the AWS Managed Rules Common Rule Set and a rate-based rule limited to 2,000 requests per source IP within the WAF evaluation window. The API Gateway stage has a rate limit of 1,000 requests per second and a burst limit of 500. These are stage-level settings, not per-API-key quotas.
+* **S3 data exposure:** Objects might be accessed outside the authorized user's scope.
+  * *Mitigation:* Enable Block Public Access, use least-privilege IAM, verify ownership in the API Handler, and issue only time-limited presigned GET and PUT URLs.
+* **Inaccurate AI results:** Labels or moderation results can include false positives or false negatives.
+  * *Mitigation:* Store confidence scores, use configurable thresholds, and allow administrator review when required.
+* **Unexpected cost:** Log retention, PITR, WAF, accumulated S3 data, or repeated processing can increase the AWS bill and consume credits.
+  * *Mitigation:* Configure AWS Budgets, suitable retention periods, CloudWatch alarms, and regular Cost Explorer reviews.
+
+### 8. Expected Outcomes
+
+* Users can register, verify email, sign in, manage profiles, and upload images through the web interface.
+* Images remain in private buckets while the asynchronous flow creates thumbnail and resized variants, extracts metadata, detects labels, and performs content moderation.
+* The API supports search, filters, pagination, a personal library, a community gallery, and Cognito-based administrative functions.
+* Infrastructure can be deployed consistently with CDK for staging and production, with logs, traces, metrics, and operational alerts.
+* Managed services can scale within their service quotas. Specific load capacity is reported only after the corresponding load tests and quota review have been completed.
