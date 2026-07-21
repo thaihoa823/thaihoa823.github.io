@@ -1,59 +1,44 @@
 ---
 title: "Week 9 Worklog"
-date: 2026-06-08
+date: 2026-06-15
 weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
 
-{{% notice warning %}}
-Note: The following information is for reference purposes only. Please do not copy verbatim for your own report.
-{{% /notice %}}
+
 
 
 ### Week 9 Objectives:
 
-* Learn the basic features of AWS Support.
-* Understand AWS Support plans, support cases, and severity levels.
-* Practice using AWS Support Center to review help resources and create a simple support case.
+* Systematize the AWS knowledge learned during the previous weeks.
+
+* Review architectural models that support scalability, security, and cost optimization.
+
+* Build a learning roadmap to prepare for AWS Associate-level certifications.
 
 
-### Tasks to be carried out this week:
+### Tasks to Be Completed This Week:
 
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 2 | - Learn the purpose of AWS Support <br> - Review the available AWS Support plans <br> - Understand the basic differences between account support, billing support, and technical support | 06/08/2026 | 06/08/2026 | <https://000009.awsstudygroup.com/> |
-| 3 | - Open AWS Support Center <br> - Review existing support cases and account notifications <br> - Learn how to search AWS documentation and troubleshooting resources | 06/09/2026 | 06/09/2026 | <https://000009.awsstudygroup.com/2-support-center/> |
-| 4 | - Learn about support case categories and severity levels <br> - Review the information required when creating a support case <br> - Prepare a short description of a simple account or billing issue | 06/10/2026 | 06/10/2026 | <https://000009.awsstudygroup.com/3-create-support-case/> |
-| 5 | - Create a simple support case for practice <br> - Select the appropriate service, category, and severity level <br> - Add a clear subject and problem description <br> - Select email as the contact method | 06/11/2026 | 06/11/2026 | <https://000009.awsstudygroup.com/3-create-support-case/> |
-| 6 | - Review the support case status and response <br> - Add a reply or additional information when needed <br> - Close the test support case after reviewing the workflow <br> - Record the main steps for future reference | 06/12/2026 | 06/12/2026 | <https://000009.awsstudygroup.com/4-manage-support-case/> |
+| 2 | - Review Amazon VPC and the use of Public and Private Subnets.<br>- Review the functions of Route Tables, Internet Gateways, NAT Gateways, Security Groups, and Network ACLs.<br>- Revisit the principles of designing secure and highly available networks. | 15/06/2026 | 15/06/2026 | <https://000003.awsstudygroup.com/vi/><br><https://cloudjourney.awsstudygroup.com/vi/1.2-networking/> |
+| 3 | - Review the design of Partition Keys and Sort Keys and the management of DynamoDB read and write capacity.<br>- Review the serverless model using AWS Lambda, Amazon S3, and DynamoDB.<br>- Learn more about Lambda Triggers, DynamoDB Streams, and event-driven processing. | 16/06/2026 | 16/06/2026 | <https://000039.awsstudygroup.com/vi/><br><https://000078.awsstudygroup.com/vi/> |
+| 4 | - Explore the learning paths for AWS Solutions Architect Associate and Developer Associate.<br>- Reorganize the acquired knowledge into networking, computing, storage, database, security, and monitoring categories. | 17/06/2026 | 17/06/2026 | <https://cloudjourney.awsstudygroup.com/vi/1.9-summary/> |
+| 5 | - Analyze an architecture using Amazon EC2, Elastic Load Balancing, and Auto Scaling Groups.<br>- Compare it with a serverless architecture using API Gateway, AWS Lambda, and DynamoDB. | 18/06/2026 | 18/06/2026 | <https://000006.awsstudygroup.com/vi/><br><https://000080.awsstudygroup.com/vi/><br><https://000034.awsstudygroup.com/vi/> |
+| 6 | - Evaluate the areas of knowledge that still need improvement.<br>- Complete a mind map connecting the AWS services studied.<br>- Review Amazon CloudWatch and cost-monitoring tools.<br>- Summarize the learned content and create a study plan for the next stage. | 19/06/2026 | 19/06/2026 | <https://000008.awsstudygroup.com/vi/><br><https://000034.awsstudygroup.com/vi/><br><https://cloudjourney.awsstudygroup.com/vi/1.9-summary/> |
 
 
 ### Week 9 Achievements:
 
-* Understood the basic purpose of AWS Support.
+* Systematized the main groups of AWS services studied.
 
-* Learned about several AWS Support plans.
+* Strengthened knowledge of Amazon VPC, DynamoDB, and serverless architecture.
 
-* Understood the basic differences between:
-  * Account support
-  * Billing support
-  * Technical support
+* Distinguished between an EC2 architecture with Auto Scaling and a serverless architecture.
 
-* Became familiar with AWS Support Center.
+* Completed a mind map connecting the main AWS services.
 
-* Reviewed support cases and account notifications.
+* Identified the areas that require further review and improvement.
 
-* Learned how to search AWS documentation and troubleshooting resources.
-
-* Understood the basic support case categories and severity levels.
-
-* Prepared a clear subject and short problem description for a support case.
-
-* Created a simple support case using AWS Support Center.
-
-* Selected an appropriate category and contact method.
-
-* Reviewed the support case status and response.
-
-* Learned how to add information, reply, and close a support case.
+* Developed a learning roadmap toward AWS Associate-level certifications.

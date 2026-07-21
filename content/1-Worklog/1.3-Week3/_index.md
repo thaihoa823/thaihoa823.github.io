@@ -1,58 +1,58 @@
 ---
 title: "Week 3 Worklog"
-date: 2026-04-27
+date: 2026-04-30
 weight: 3
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
 
-{{% notice warning %}}
-Note: The following information is for reference purposes only. Please do not copy verbatim for your own report.
-{{% /notice %}}
+
 
 
 ### Week 3 Objectives:
 
-* Learn the basic concepts of Amazon VPC.
-* Understand subnets, route tables, Internet Gateways, and Security Groups.
-* Practice creating a simple network environment and testing an EC2 connection.
+* Learn about common computing models on AWS, including virtual machines, containers, and serverless computing.
+
+* Become familiar with Amazon EC2, Amazon ECS, Amazon EKS, AWS Fargate, and AWS Lambda.
+
+* Understand how Amazon S3 stores, protects, and manages object-based data.
 
 
-### Tasks to be carried out this week:
+### Tasks to Be Completed This Week:
 
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 2 | - Learn the purpose of Amazon VPC <br> - Understand CIDR blocks, public subnets, and private subnets <br> - Review the basic components of a VPC | 04/27/2026 | 04/27/2026 | <https://000003.awsstudygroup.com/> |
-| 3 | - Create a simple Amazon VPC <br> - Create one public subnet and one private subnet <br> - Review the VPC resource map | 04/28/2026 | 04/28/2026 | <https://000003.awsstudygroup.com/3-preparation-steps/> |
-| 4 | - Create and attach an Internet Gateway <br> - Create a route table for the public subnet <br> - Add a route to the Internet Gateway | 04/29/2026 | 04/29/2026 | <https://000003.awsstudygroup.com/3-preparation-steps/> |
-| 5 | - Create a basic Security Group <br> - Allow SSH access only from a trusted IP address <br> - Review the difference between Security Groups and Network ACLs | 04/30/2026 | 04/30/2026 | <https://000003.awsstudygroup.com/2-firewall-in-vpc/> |
-| 6 | - Launch a small EC2 instance in the public subnet <br> - Check the instance network information <br> - Test the connection to the instance <br> - Delete the temporary EC2 instance and VPC resources after practice | 05/01/2026 | 05/01/2026 | <https://000003.awsstudygroup.com/4-deploy-ec2/> <br> <https://000003.awsstudygroup.com/6-clean-up-resources/> |
+| 2 | - Learn about Amazon EC2 and its main components, including Instances, AMIs, Instance Types, EBS, and Security Groups.<br>- Become familiar with Amazon Lightsail and how it can be used to quickly deploy a server or a simple application. | 30/04/2026 | 30/04/2026 | <https://000004.awsstudygroup.com/vi/><br><https://000045.awsstudygroup.com/vi/> |
+| 3 | - Learn about containers and Docker Images.<br>- Become familiar with Amazon ECR for storing Docker Images.<br>- Distinguish between the roles of Amazon ECS, AWS Fargate, and Amazon EKS in running containerized applications. | 01/05/2026 | 01/05/2026 | <https://000016.awsstudygroup.com/vi/1-introduction/><br><https://000126.awsstudygroup.com/vi/> |
+| 4 | - Learn about the serverless model and how AWS Lambda runs source code without requiring users to manage servers.<br>- Study how events from AWS services can trigger Lambda functions.<br>- Make a basic comparison between EC2, containers, and Lambda. | 04/05/2026 | 04/05/2026 | <https://000078.awsstudygroup.com/vi/1-introduce/> |
+| 5 | - Learn about Amazon S3 and how data is organized using Buckets, Objects, and Object Keys.<br>- Become familiar with Block Public Access, Bucket Versioning, and basic data protection methods.<br>- Learn how Amazon S3 can be used to store files and host a static website. | 05/05/2026 | 05/05/2026 | <https://000057.awsstudygroup.com/vi/> |
+| 6 | - Practice launching a Linux EC2 Instance, configuring a Security Group, and connecting to the server.<br>- Practice creating an S3 Bucket, uploading files, checking stored Objects, and enabling Bucket Versioning.<br>- Review and remove unused resources to avoid unexpected charges. | 06/05/2026 | 06/05/2026 | <https://000004.awsstudygroup.com/vi/><br><https://000057.awsstudygroup.com/vi/> |
 
 
 ### Week 3 Achievements:
 
-* Understood the basic purpose of Amazon VPC.
+* Understood that Amazon EC2 provides customizable virtual servers with configurable operating systems and computing resources.
 
-* Learned the basic meaning of:
-  * CIDR block
-  * Public subnet
-  * Private subnet
-  * Route table
-  * Internet Gateway
-  * Security Group
+* Learned that Amazon Lightsail is suitable for simple applications that need to be deployed quickly.
 
-* Created a simple VPC with public and private subnets.
+* Distinguished between common computing models:
+  * Virtual machines with Amazon EC2
+  * Containers with Amazon ECS and Amazon EKS
+  * Serverless computing with AWS Lambda
 
-* Created and attached an Internet Gateway.
+* Understood that Amazon ECR is used to store and manage Docker Images.
 
-* Configured a route table for the public subnet.
+* Learned that AWS Fargate allows containers to run without directly managing servers.
 
-* Created a basic Security Group for an EC2 instance.
+* Understood that AWS Lambda can execute source code when triggered by events from other services.
 
-* Understood the basic difference between Security Groups and Network ACLs.
+* Learned the basic components of Amazon S3:
+  * Bucket
+  * Object
+  * Object Key
+  * Bucket Versioning
+  * Block Public Access
 
-* Launched an EC2 instance in the public subnet.
+* Learned how to create an EC2 Instance, connect to the server, and configure a basic Security Group.
 
-* Checked the EC2 network information and tested the connection.
-
-* Deleted temporary resources after completing the practice.
+* Learned how to create an S3 Bucket, upload data, and check the stored Objects.

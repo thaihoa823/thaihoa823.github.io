@@ -1,59 +1,59 @@
 ---
 title: "Week 2 Worklog"
-date: 2026-04-20
+date: 2026-04-25
 weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
 
-{{% notice warning %}}
-Note: The following information is for reference purposes only. Please do not copy verbatim for your own report.
-{{% /notice %}}
+
 
 
 ### Week 2 Objectives:
 
-* Learn the basic concepts of AWS Identity and Access Management.
-* Understand IAM users, groups, policies, and roles.
-* Practice creating simple IAM resources and checking access permissions.
+* Learn how to design and organize network infrastructure on AWS.
+
+* Understand the roles of routing, content delivery, and load-balancing services.
+
+* Become familiar with basic network security and monitoring solutions on AWS.
 
 
-### Tasks to be carried out this week:
+### Tasks to Be Completed This Week:
 
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 2 | - Learn the purpose of AWS IAM <br> - Understand the difference between the root user and IAM users <br> - Learn about IAM users, groups, policies, and roles | 04/20/2026 | 04/20/2026 | <https://000002.awsstudygroup.com/> |
-| 3 | - Create an IAM group for administrators <br> - Attach an AWS-managed policy to the group <br> - Create a test IAM user and add the user to the group | 04/21/2026 | 04/21/2026 | <https://000002.awsstudygroup.com/2-create-user-group/> |
-| 4 | - Sign in to the AWS Management Console using the IAM user <br> - Check the permissions assigned through the IAM group <br> - Review the IAM user and group information | 04/22/2026 | 04/22/2026 | <https://000002.awsstudygroup.com/2-create-user-group/> |
-| 5 | - Learn the basic structure of an IAM policy <br> - Review the purpose of the Effect, Action, Resource, and Condition fields <br> - Learn about the principle of least privilege | 04/23/2026 | 04/23/2026 | <https://000002.awsstudygroup.com/> |
-| 6 | - Create a simple IAM role for practice <br> - Review the trust relationship and attached permissions <br> - Test switching roles in the AWS Console <br> - Delete the temporary IAM user, group, and role after the practice | 04/24/2026 | 04/24/2026 | <https://000002.awsstudygroup.com/3-create-role-user/> <br> <https://000002.awsstudygroup.com/4-switch-role/> |
+| 2 | - Learn how Amazon Route 53 supports domain management and DNS resolution.<br>- Study how Amazon CloudFront delivers content from locations closer to users.<br>- Learn how to combine Amazon S3 and CloudFront to host and distribute a static website. | 25/04/2026 | 25/04/2026 | <https://000010.awsstudygroup.com/vi/><br><https://000094.awsstudygroup.com/vi/> |
+| 3 | - Learn the basic operating principles of Elastic Load Balancing.<br>- Distinguish between the basic roles of Application Load Balancer and Network Load Balancer.<br>- Become familiar with Amazon API Gateway and how it receives and manages API requests. | 26/04/2026 | 26/04/2026 | <https://000006.awsstudygroup.com/vi/><br><https://000079.awsstudygroup.com/vi/1-introduction/> |
+| 4 | - Learn how to connect two VPCs by using VPC Peering.<br>- Study Site-to-Site VPN for establishing a secure connection between an on-premises network and an Amazon VPC.<br>- Become familiar with AWS Transit Gateway for centrally connecting and managing multiple VPCs. | 27/04/2026 | 27/04/2026 | <https://000019.awsstudygroup.com/vi/><br><https://000003.awsstudygroup.com/vi/5-vpnsitetosite/><br><https://000020.awsstudygroup.com/vi/> |
+| 5 | - Distinguish between Security Groups and Network ACLs in controlling network traffic.<br>- Learn about AWS WAF and how Web ACLs can be used to filter inappropriate requests.<br>- Study the role of SSL/TLS certificates in securing website connections. | 28/04/2026 | 28/04/2026 | <https://000003.awsstudygroup.com/vi/2-firewallinvpc/><br><https://000026.awsstudygroup.com/vi/><br><https://000082.awsstudygroup.com/vi/> |
+| 6 | - Learn how VPC Flow Logs record inbound and outbound traffic in a VPC.<br>- Become familiar with CloudWatch Metrics, Logs, and Alarms for monitoring AWS resources.<br>- Practice creating a basic VPC, Subnet, Route Table, and Security Group, and check connectivity by using Reachability Analyzer. | 29/05/2026 | 29/05/2026 | <https://000003.awsstudygroup.com/vi/><br><https://000074.awsstudygroup.com/vi/><br><https://000008.awsstudygroup.com/vi/> |
 
 
 ### Week 2 Achievements:
 
-* Understood the basic purpose of AWS IAM.
+* Understood the role of Amazon Route 53 in domain management and DNS resolution.
 
-* Learned the differences between:
-  * Root user
-  * IAM user
-  * IAM group
-  * IAM policy
-  * IAM role
+* Learned how Amazon CloudFront helps deliver websites and content to users more quickly.
 
-* Created an IAM group and attached a managed policy.
+* Distinguished between the basic functions of:
+  * Application Load Balancer
+  * Network Load Balancer
+  * Amazon API Gateway
 
-* Created a test IAM user and added the user to the group.
+* Understood the main components of Amazon VPC:
+  * Subnet
+  * Route Table
+  * Internet Gateway
+  * NAT Gateway
 
-* Signed in to the AWS Console using the IAM user.
+* Understood how VPC Peering, Site-to-Site VPN, and AWS Transit Gateway support connectivity between network environments on AWS.
 
-* Checked the permissions inherited from the IAM group.
+* Distinguished between Security Groups and Network ACLs in controlling network traffic.
 
-* Understood the main fields in an IAM policy.
+* Learned how AWS WAF helps filter and protect websites from inappropriate or potentially harmful requests.
 
-* Learned the basic meaning of the principle of least privilege.
+* Understood that VPC Flow Logs are used to record network traffic within a VPC.
 
-* Created and reviewed a simple IAM role.
+* Became familiar with CloudWatch Metrics, Logs, and Alarms for monitoring AWS resources.
 
-* Practiced switching roles in the AWS Console.
-
-* Deleted temporary IAM resources after completing the practice
+* Learned how Reachability Analyzer supports connectivity testing between resources in a VPC.

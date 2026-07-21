@@ -1,61 +1,40 @@
 ---
 title: "Worklog Tuần 10"
-date: 2026-06-15
+date: 2026-06-22
 weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
 
-{{% notice warning %}}
-Lưu ý: Nội dung dưới đây chỉ dùng để tham khảo, vui lòng không sao chép nguyên văn cho báo cáo của bạn.
-{{% /notice %}}
+
 
 
 ### Mục tiêu tuần 10:
 
-* Tìm hiểu các khái niệm cơ bản về hybrid DNS.
-* Hiểu Route 53 Resolver inbound endpoint, outbound endpoint và resolver rule.
-* Thực hành kiểm tra kết nối DNS đơn giản giữa môi trường AWS và môi trường on-premises mô phỏng.
+* Hoàn thành bài kiểm tra tổng hợp kiến thức AWS đã học.
+
+* Xây dựng bản đề xuất kỹ thuật cho một giải pháp triển khai trên AWS.
+
+* Hoàn thiện sơ đồ kiến trúc
 
 
 ### Các công việc cần triển khai trong tuần này:
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 2 | - Tìm hiểu mục đích của Amazon Route 53 và Route 53 Resolver <br> - Hiểu ý tưởng cơ bản của hybrid DNS <br> - Tìm hiểu inbound endpoint, outbound endpoint và resolver rule | 15/06/2026 | 15/06/2026 | <https://000010.awsstudygroup.com/> |
-| 3 | - Xem kiến trúc của bài thực hành <br> - Tạo hoặc kiểm tra key pair và Security Group cần thiết <br> - Triển khai các tài nguyên VPC mẫu bằng CloudFormation template | 16/06/2026 | 16/06/2026 | <https://000010.awsstudygroup.com/2-preparation/> |
-| 4 | - Tìm hiểu môi trường AWS Managed Microsoft AD được dùng để mô phỏng hệ thống DNS on-premises <br> - Kiểm tra các thiết lập VPC, subnet và DNS <br> - Xác minh các tài nguyên cần thiết đã sẵn sàng | 17/06/2026 | 17/06/2026 | <https://000010.awsstudygroup.com/4-microsoft-ad-deployment/> |
-| 5 | - Tạo hoặc kiểm tra Route 53 Resolver outbound endpoint <br> - Tạo resolver forwarding rule đơn giản <br> - Gắn rule vào VPC được chọn | 18/06/2026 | 18/06/2026 | <https://000010.awsstudygroup.com/5-setuphyriddns/5.1-createoe/> <br> <https://000010.awsstudygroup.com/5-setuphyriddns/5.2-createroute53/> |
-| 6 | - Tạo hoặc kiểm tra Route 53 Resolver inbound endpoint <br> - Kiểm tra phân giải tên miền giữa môi trường AWS và môi trường on-premises mô phỏng <br> - Ghi lại kết quả kiểm tra <br> - Xóa các tài nguyên tạm thời sau khi thực hành | 19/06/2026 | 19/06/2026 | <https://000010.awsstudygroup.com/5-setuphyriddns/5.3-createie/> <br> <https://000010.awsstudygroup.com/5-setuphyriddns/5.4-test-results/> <br> <https://000010.awsstudygroup.com/6-clean-up-resources/> |
+| 2 | - Thực hành giải quyết các tình huống liên quan đến lỗi kết nối mạng, quyền truy cập và hoạt động của tài nguyên AWS.<br>- Ôn lại cách kiểm tra VPC, Security Group, CloudWatch Logs và các thành phần liên quan khi xảy ra sự cố. | 22/06/2026 | 22/06/2026 | <https://cloudjourney.awsstudygroup.com/vi/1.10-finalquiz/><br><https://000003.awsstudygroup.com/vi/><br><https://000008.awsstudygroup.com/vi/> |
+| 3 | - Thực hiện bài kiểm tra tổng hợp cuối khóa.<br>- Rà soát lại kiến thức về mạng, tính toán, lưu trữ, cơ sở dữ liệu, bảo mật, giám sát và quản lý chi phí.<br>- Ghi nhận những nội dung cần tiếp tục cải thiện. | 23/06/2026 | 23/06/2026 | <https://cloudjourney.awsstudygroup.com/vi/1.10-finalquiz/> |
+| 4 | - Xây dựng cấu trúc bản đề xuất kỹ thuật gồm mục tiêu, yêu cầu, phạm vi và các dịch vụ AWS dự kiến sử dụng.<br>- Lựa chọn giải pháp mạng, tính toán, lưu trữ, cơ sở dữ liệu và bảo mật phù hợp.<br>- Đề xuất phương án mở rộng và đảm bảo tính sẵn sàng cho hệ thống. | 24/06/2026 | 24/06/2026 | <https://cloudjourney.awsstudygroup.com/vi/1.10-finalquiz/proposal/><br><https://000003.awsstudygroup.com/vi/><br><https://000006.awsstudygroup.com/vi/> |
+| 5 | - Vẽ sơ đồ kiến trúc thể hiện luồng hoạt động từ người dùng đến các dịch vụ AWS.<br>- Bổ sung các thành phần giám sát, bảo mật, sao lưu và khả năng mở rộng.<br>- Kiểm tra lại kiến trúc theo các nguyên tắc của AWS Well-Architected Framework. | 25/06/2026 | 25/06/2026 | <https://cloudjourney.awsstudygroup.com/vi/1.10-finalquiz/architecture/><br><https://000006.awsstudygroup.com/vi/><br><https://000008.awsstudygroup.com/vi/><br><https://000018.awsstudygroup.com/vi/> |
+| 6 | - Sử dụng AWS Pricing Calculator để ước tính chi phí vận hành hằng tháng.<br>- Xem xét chi phí của các dịch vụ chính và chi phí truyền dữ liệu.<br>- Đề xuất một số phương án tối ưu tài nguyên và hạn chế chi phí không cần thiết.<br>- Hoàn thiện bản đề xuất kỹ thuật và bảng dự toán. | 26/06/2026 | 26/06/2026 | <https://cloudjourney.awsstudygroup.com/vi/1.10-finalquiz/calculator/><br><https://000300.awsstudygroup.com/vi/8-awspricingcalculator/><br><https://000034.awsstudygroup.com/vi/> |
 
 
 ### Kết quả đạt được tuần 10:
 
-* Hiểu mục đích cơ bản của hybrid DNS.
+* Hoàn thành bài kiểm tra tổng hợp và xác định các kiến thức cần tiếp tục củng cố.
 
-* Biết ý nghĩa cơ bản của:
-  * Route 53 Resolver
-  * Inbound endpoint
-  * Outbound endpoint
-  * Resolver rule
-  * DNS forwarding
+* Xây dựng được bản đề xuất kỹ thuật với mục tiêu, phạm vi và các dịch vụ AWS phù hợp.
 
-* Tìm hiểu kiến trúc kết nối DNS giữa AWS và môi trường DNS on-premises mô phỏng.
+* Hoàn thiện sơ đồ kiến trúc có các thành phần mạng, bảo mật, giám sát và mở rộng.
 
-* Sử dụng CloudFormation template để tạo hoặc kiểm tra các tài nguyên mạng cần thiết.
-
-* Kiểm tra các thiết lập VPC, subnet, Security Group và DNS.
-
-* Hiểu cách outbound endpoint chuyển tiếp DNS query đến hệ thống DNS khác.
-
-* Tạo hoặc kiểm tra resolver forwarding rule đơn giản.
-
-* Gắn resolver rule vào VPC.
-
-* Hiểu cách inbound endpoint nhận DNS query từ hệ thống DNS bên ngoài.
-
-* Kiểm tra phân giải tên miền cơ bản giữa hai môi trường.
-
-* Ghi lại kết quả kiểm tra DNS.
-
-* Xóa các tài nguyên tạm thời sau khi hoàn thành thực hành.
+* Sử dụng AWS Pricing Calculator để lập bảng dự toán chi phí cơ bản.

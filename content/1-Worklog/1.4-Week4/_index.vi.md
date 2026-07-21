@@ -1,57 +1,51 @@
 ---
 title: "Worklog Tuần 4"
-date: 2026-05-04
+date: 2026-05-11
 weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
 
-{{% notice warning %}}
-Lưu ý: Nội dung dưới đây chỉ dùng để tham khảo, vui lòng không sao chép nguyên văn cho báo cáo của bạn.
-{{% /notice %}}
-
-
 ### Mục tiêu tuần 4:
 
-* Tìm hiểu các khái niệm cơ bản về Amazon EC2.
-* Hiểu instance type, Amazon Machine Image, key pair và các thiết lập bảo mật.
-* Thực hành khởi tạo, kết nối và quản lý một EC2 instance đơn giản.
+* Tìm hiểu các hình thức lưu trữ dữ liệu phổ biến trên AWS gồm Object Storage, Block Storage và File Storage.
+
+* Nắm được cách bảo vệ, phân loại và tối ưu chi phí lưu trữ dữ liệu.
+
+* Làm quen với các phương pháp sao lưu và khôi phục tài nguyên trên AWS.
 
 
 ### Các công việc cần triển khai trong tuần này:
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 2 | - Tìm hiểu mục đích của Amazon EC2 <br> - Tìm hiểu Amazon Machine Image và instance type <br> - Xem các thiết lập chính trước khi khởi tạo EC2 instance | 04/05/2026 | 04/05/2026 | <https://000004.awsstudygroup.com/> |
-| 3 | - Tạo EC2 key pair <br> - Tạo hoặc chọn Security Group cơ bản <br> - Khởi tạo một Amazon Linux EC2 instance nhỏ bằng instance type phù hợp Free Tier | 05/05/2026 | 05/05/2026 | <https://000004.awsstudygroup.com/2-create-ec2/> |
-| 4 | - Kiểm tra trạng thái và thông tin mạng của EC2 instance <br> - Kết nối đến instance bằng SSH hoặc EC2 Instance Connect <br> - Chạy một số lệnh Linux cơ bản trên instance | 06/05/2026 | 06/05/2026 | <https://000004.awsstudygroup.com/3-connect-ec2/> |
-| 5 | - Cài đặt web server đơn giản trên EC2 instance <br> - Tạo trang web thử nghiệm cơ bản <br> - Cập nhật Security Group để cho phép truy cập HTTP <br> - Mở trang web bằng public IP của instance | 07/05/2026 | 07/05/2026 | <https://000004.awsstudygroup.com/4-install-web-server/> |
-| 6 | - Thực hành dừng và khởi động lại EC2 instance <br> - Quan sát sự thay đổi trạng thái và public IP <br> - Xem thông tin giám sát cơ bản của EC2 <br> - Xóa instance tạm thời sau khi hoàn thành thực hành | 08/05/2026 | 08/05/2026 | <https://000004.awsstudygroup.com/5-manage-ec2/> <br> <https://000004.awsstudygroup.com/6-clean-up/> |
+| 2 | - Tìm hiểu Amazon S3 và các lớp lưu trữ dành cho dữ liệu có tần suất truy cập khác nhau.<br>- Làm quen với S3 Glacier dành cho dữ liệu cần lưu trữ lâu dài.<br>- Tìm hiểu Bucket Versioning, Bucket Policy và Block Public Access để bảo vệ dữ liệu. | 07/05/2026 | 07/05/2026 | <https://000057.awsstudygroup.com/vi/><br><https://000078.awsstudygroup.com/vi/> |
+| 3 | - Tìm hiểu Amazon EBS và các loại ổ đĩa SSD, HDD phù hợp với từng nhu cầu sử dụng.<br>- Nghiên cứu cách tạo EBS Snapshot để sao lưu dữ liệu.<br>- Tìm hiểu quy trình khôi phục một EBS Volume từ Snapshot đã có. | 08/05/2026 | 08/05/2026 | <https://000004.awsstudygroup.com/vi/5-amazonec2basic/5.2-createec2snapshot/><br><https://100000.awsstudygroup.com/vi/1-intro/>  |
+| 4 | - Phân biệt Object Storage, Block Storage và File Storage.<br>- Làm quen với Amazon EFS và Amazon FSx trong việc cung cấp hệ thống tệp dùng chung.<br>- Tìm hiểu sự khác nhau giữa EBS, EFS và S3. | 11/05/2026 | 11/05/2026 | <https://100000.awsstudygroup.com/vi/1-intro/> |
+| 5 | - Tìm hiểu AWS Storage Gateway và vai trò kết nối hệ thống lưu trữ nội bộ với AWS.<br>- Làm quen với quá trình tạo File Gateway và File Share.<br>- Tìm hiểu cách dữ liệu từ môi trường nội bộ được đồng bộ lên Amazon S3. | 12/05/2026 | 12/05/2026 | <https://000024.awsstudygroup.com/vi/2-useawsstoragegw/> |
+| 6 | - Tìm hiểu AWS Backup và cách quản lý hoạt động sao lưu tập trung.<br>- Làm quen với Backup Vault, Backup Plan và Recovery Point.<br>- Thực hành thiết lập kế hoạch sao lưu cho EBS và kiểm tra khả năng khôi phục dữ liệu.<br>- Xóa các tài nguyên thực hành không còn sử dụng. | 13/05/2026 | 13/05/2026 | <https://000013.awsstudygroup.com/vi/> |
 
 
 ### Kết quả đạt được tuần 4:
 
-* Hiểu mục đích cơ bản của Amazon EC2.
+* Phân biệt được ba loại lưu trữ chính:
+  * Object Storage
+  * Block Storage
+  * File Storage
 
-* Biết ý nghĩa cơ bản của:
-  * Amazon Machine Image
-  * Instance type
-  * Key pair
-  * Security Group
-  * Public IP address
+* Hiểu Amazon S3 phù hợp với việc lưu trữ tệp, dữ liệu tĩnh và dữ liệu có dung lượng lớn.
 
-* Tạo EC2 key pair và chọn Security Group cơ bản.
+* Biết sử dụng Versioning, Bucket Policy và Block Public Access để tăng khả năng bảo vệ dữ liệu trong S3.
 
-* Khởi tạo một Amazon Linux EC2 instance nhỏ.
+* Hiểu S3 Glacier được sử dụng cho dữ liệu ít truy cập và cần lưu trữ lâu dài.
 
-* Kiểm tra trạng thái và thông tin mạng của instance.
+* Biết Amazon EBS cung cấp ổ đĩa khối cho EC2 và có thể sao lưu bằng Snapshot.
 
-* Kết nối đến EC2 instance và sử dụng một số lệnh Linux cơ bản.
+* Phân biệt được vai trò cơ bản của Amazon S3, Amazon EBS và Amazon EFS.
 
-* Cài đặt web server đơn giản và tạo trang web thử nghiệm.
+* Hiểu AWS Storage Gateway hỗ trợ kết nối hệ thống lưu trữ nội bộ với AWS Cloud.
 
-* Truy cập trang web thử nghiệm bằng public IP của instance.
-
-* Thực hành dừng và khởi động lại EC2 instance.
-
-* Xóa EC2 instance tạm thời sau khi hoàn thành thực hành.
+* Làm quen với AWS Backup và các thành phần:
+  * Backup Vault
+  * Backup Plan
+  * Recovery Point

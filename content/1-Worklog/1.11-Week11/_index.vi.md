@@ -1,67 +1,44 @@
 ---
 title: "Worklog Tuần 11"
-date: 2026-06-22
+date: 2026-06-29
 weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
 
-{{% notice warning %}}
-Lưu ý: Nội dung dưới đây chỉ dùng để tham khảo, vui lòng không sao chép nguyên văn cho báo cáo của bạn.
-{{% /notice %}}
+
 
 
 ### Mục tiêu tuần 11:
 
-* Tìm hiểu mục đích và cách sử dụng cơ bản của AWS Command Line Interface.
-* Hiểu cách cài đặt AWS CLI, cấu hình profile, region và output format.
-* Thực hành chạy một số lệnh AWS CLI đơn giản với S3, IAM, VPC và EC2.
+* Tìm hiểu cách xây dựng và bảo vệ API trong kiến trúc serverless trên AWS.
+
+* Thực hành xác thực người dùng bằng Amazon Cognito và kiểm soát truy cập API.
+
+* Làm quen với AWS WAF, AWS Lambda và S3 Presigned URL để hỗ trợ tải tệp an toàn.
 
 
 ### Các công việc cần triển khai trong tuần này:
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 2 | - Tìm hiểu mục đích của AWS CLI <br> - Xem các môi trường dòng lệnh được hỗ trợ như PowerShell và Command Prompt <br> - Phân biệt cơ bản giữa sử dụng AWS Console và AWS CLI | 22/06/2026 | 22/06/2026 | <https://000011.awsstudygroup.com/> |
-| 3 | - Cài đặt AWS CLI trên máy tính cá nhân <br> - Kiểm tra phiên bản AWS CLI đã cài đặt <br> - Cấu hình CLI profile cơ bản với region và output format <br> - Chạy lệnh để xác minh AWS identity hiện tại | 23/06/2026 | 23/06/2026 | <https://000011.awsstudygroup.com/3-install-aws-cli/> |
-| 4 | - Chạy các lệnh đơn giản để liệt kê tài nguyên AWS hiện có <br> - Thực hành xem S3 bucket và object <br> - Kiểm tra kết quả lệnh ở định dạng JSON và table | 24/06/2026 | 24/06/2026 | <https://000011.awsstudygroup.com/4-view-resource-via-cli/> <br> <https://000011.awsstudygroup.com/5-aws-cli-with-amazon-s3/> |
-| 5 | - Thực hành xem thông tin IAM cơ bản bằng AWS CLI <br> - Liệt kê VPC, subnet và Security Group hiện có <br> - Tìm hiểu cấu trúc của AWS CLI command và parameter | 25/06/2026 | 25/06/2026 | <https://000011.awsstudygroup.com/7-aws-cli-with-iam/> <br> <https://000011.awsstudygroup.com/8-aws-cli-with-vpc/> |
-| 6 | - Xem lệnh cơ bản dùng để tạo EC2 instance <br> - Chạy các lệnh đơn giản để xem EC2 instance và kiểm tra trạng thái <br> - Tìm hiểu một số lỗi AWS CLI thường gặp và cách xử lý <br> - Xóa các tài nguyên tạm thời đã tạo trong quá trình thực hành | 26/06/2026 | 26/06/2026 | <https://000011.awsstudygroup.com/9-creating-ec2-using-aws-cli/> <br> <https://000011.awsstudygroup.com/10-troubleshooting/> <br> <https://000011.awsstudygroup.com/11-clean-up-resources/> |
+| 2 | - Tìm hiểu quy trình tải tệp an toàn lên Amazon S3.<br>- Nghiên cứu cách API Gateway, Lambda và S3 phối hợp trong kiến trúc serverless.<br>- Làm quen với việc sử dụng token để xác minh yêu cầu từ người dùng. | 29/06/2026 | 29/06/2026 | <https://cloudjourney.awsstudygroup.com/vi/1.11-project-p1/><br><https://000078.awsstudygroup.com/vi/> |
+| 3 | - Thực hành tạo Amazon Cognito User Pool và App Client.<br>- Thiết lập phương thức đăng nhập, chính sách mật khẩu và xác minh tài khoản.<br>- Tìm hiểu cách Cognito phát hành token sau khi người dùng đăng nhập thành công. | 30/06/2026 | 30/06/2026 | <https://cloudjourney.awsstudygroup.com/vi/1.11-project-p1/cognito/><br><https://000081.awsstudygroup.com/vi/2-create-user-pool/> |
+| 4 | - Tạo các route và phương thức HTTP trong Amazon API Gateway.<br>- Tích hợp API Gateway với AWS Lambda để xử lý yêu cầu.<br>- Cấu hình Cognito Authorizer nhằm giới hạn API cho người dùng đã xác thực. | 01/07/2026 | 01/07/2026 | <https://cloudjourney.awsstudygroup.com/vi/1.11-project-p1/apigateway/><br><https://000079.awsstudygroup.com/vi/1-introduction/><br><https://000117.awsstudygroup.com/6-identity/6.8-authorizer/> |
+| 5 | - Tìm hiểu cách AWS WAF bảo vệ website và API trước các yêu cầu không hợp lệ.<br>- Làm quen với Web ACL, AWS Managed Rules và cơ chế giới hạn số lượng yêu cầu.<br>- Thực hành liên kết Web ACL với tài nguyên cần bảo vệ. | 02/07/2026 | 02/07/2026 | <https://cloudjourney.awsstudygroup.com/vi/1.11-project-p1/waf/><br><https://000026.awsstudygroup.com/vi/3-useawswaf/> |
+| 6 | - Xây dựng Lambda function để tạo S3 Presigned URL có thời hạn sử dụng giới hạn.<br>- Kiểm tra quyền IAM cần thiết để Lambda truy cập S3.<br>- Thử nghiệm quá trình gọi API và tải tệp lên S3 mà không cấp quyền ghi công khai cho Bucket. | 03/07/2026 | 03/07/2026 | <https://cloudjourney.awsstudygroup.com/vi/1.11-project-p1/lambda-handler/><br><https://000078.awsstudygroup.com/vi/><br><https://000033.awsstudygroup.com/vi/6-demo/> |
 
 
 ### Kết quả đạt được tuần 11:
 
-* Hiểu mục đích cơ bản của AWS CLI.
+* Hoàn thành cấu hình Amazon Cognito User Pool và App Client.
 
-* Biết AWS CLI có thể được sử dụng từ:
-  * Windows PowerShell
-  * Command Prompt
-  * Linux hoặc macOS shell
-  * Amazon EC2 thông qua SSH hoặc Systems Manager
+* Xây dựng được các route API Gateway tích hợp với AWS Lambda.
 
-* Cài đặt AWS CLI và kiểm tra phiên bản.
+* Áp dụng Cognito Authorizer để kiểm soát quyền truy cập API.
 
-* Cấu hình AWS CLI profile cơ bản.
+* Thiết lập AWS WAF nhằm tăng khả năng bảo vệ API trước các yêu cầu bất thường.
 
-* Biết ý nghĩa cơ bản của:
-  * Access key
-  * Secret access key
-  * Default region
-  * Output format
-  * Named profile
+* Tạo được S3 Presigned URL để hỗ trợ tải tệp an toàn trong thời gian giới hạn.
 
-* Xác minh AWS identity hiện tại bằng lệnh CLI.
-
-* Chạy các lệnh đơn giản để liệt kê tài nguyên S3.
-
-* Xem kết quả lệnh ở định dạng JSON và table.
-
-* Sử dụng các lệnh cơ bản để xem thông tin IAM và VPC.
-
-* Liệt kê VPC, subnet và Security Group.
-
-* Xem các lệnh mô tả EC2 instance và kiểm tra trạng thái.
-
-* Tìm hiểu một số bước xử lý lỗi AWS CLI cơ bản.
-
-* Xóa các tài nguyên tạm thời sau khi hoàn thành thực hành.
+* Kiểm tra thành công luồng xác thực, gọi API và tải dữ liệu lên Amazon S3.

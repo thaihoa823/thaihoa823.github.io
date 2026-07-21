@@ -1,59 +1,44 @@
 ---
 title: "Worklog Tuần 9"
-date: 2026-06-08
+date: 2026-06-15
 weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
 
-{{% notice warning %}}
-Lưu ý: Nội dung dưới đây chỉ dùng để tham khảo, vui lòng không sao chép nguyên văn cho báo cáo của bạn.
-{{% /notice %}}
+
 
 
 ### Mục tiêu tuần 9:
 
-* Tìm hiểu các tính năng cơ bản của AWS Support.
-* Hiểu AWS Support plan, support case và severity level.
-* Thực hành sử dụng AWS Support Center để xem tài liệu hỗ trợ và tạo support case đơn giản.
+* Hệ thống hóa các kiến thức AWS đã học trong những tuần trước.
+
+* Ôn tập các mô hình kiến trúc có khả năng mở rộng, bảo mật và tối ưu chi phí.
+
+* Xây dựng lộ trình học tập để chuẩn bị cho chứng chỉ AWS cấp độ Associate.
 
 
 ### Các công việc cần triển khai trong tuần này:
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 2 | - Tìm hiểu mục đích của AWS Support <br> - Xem các AWS Support plan hiện có <br> - Phân biệt cơ bản giữa account support, billing support và technical support | 08/06/2026 | 08/06/2026 | <https://000009.awsstudygroup.com/> |
-| 3 | - Mở AWS Support Center <br> - Kiểm tra các support case và thông báo tài khoản hiện có <br> - Tìm hiểu cách tra cứu tài liệu AWS và hướng dẫn xử lý sự cố | 09/06/2026 | 09/06/2026 | <https://000009.awsstudygroup.com/2-support-center/> |
-| 4 | - Tìm hiểu category và severity level của support case <br> - Xem các thông tin cần chuẩn bị khi tạo support case <br> - Chuẩn bị mô tả ngắn cho một vấn đề đơn giản về tài khoản hoặc billing | 10/06/2026 | 10/06/2026 | <https://000009.awsstudygroup.com/3-create-support-case/> |
-| 5 | - Tạo một support case đơn giản để thực hành <br> - Chọn service, category và severity level phù hợp <br> - Nhập subject và mô tả vấn đề rõ ràng <br> - Chọn email làm phương thức liên hệ | 11/06/2026 | 11/06/2026 | <https://000009.awsstudygroup.com/3-create-support-case/> |
-| 6 | - Kiểm tra trạng thái và phản hồi của support case <br> - Bổ sung thông tin khi cần thiết <br> - Đóng support case thử nghiệm sau khi xem quy trình <br> - Ghi lại các bước chính để tham khảo sau này | 12/06/2026 | 12/06/2026 | <https://000009.awsstudygroup.com/4-manage-support-case/> |
+| 2 | - Ôn tập Amazon VPC và cách phân chia mạng bằng Public Subnet, Private Subnet.<br>- Hệ thống lại chức năng của Route Table, Internet Gateway, NAT Gateway, Security Group và Network ACL.<br>- Xem lại các nguyên tắc thiết kế mạng an toàn và có tính sẵn sàng cao. | 15/06/2026 | 15/06/2026 | <https://000003.awsstudygroup.com/vi/><br><https://cloudjourney.awsstudygroup.com/vi/1.2-networking/>|
+| 3 | - Ôn tập cách thiết kế Partition Key, Sort Key và quản lý khả năng đọc, ghi của DynamoDB.<br>- Xem lại mô hình Serverless với AWS Lambda, Amazon S3 và DynamoDB.<br>- Tìm hiểu thêm về Lambda Trigger, DynamoDB Streams và xử lý theo sự kiện. | 16/06/2026 | 16/06/2026 | <https://000039.awsstudygroup.com/vi/><br><https://000078.awsstudygroup.com/vi/> |
+| 4 | - Tìm hiểu lộ trình học AWS Solutions Architect Associate và Developer Associate.<br>- Phân loại lại kiến thức theo các nhóm mạng, tính toán, lưu trữ, cơ sở dữ liệu, bảo mật và giám sát.<br> | 17/06/2026 | 17/06/2026 | <https://cloudjourney.awsstudygroup.com/vi/1.9-summary/> |
+| 5 | - Phân tích kiến trúc sử dụng EC2, Elastic Load Balancing và Auto Scaling Group.<br>- So sánh với mô hình Serverless sử dụng API Gateway, Lambda và DynamoDB.<br> | 18/06/2026 | 18/06/2026 | <https://000006.awsstudygroup.com/vi/><br><https://000080.awsstudygroup.com/vi/><br><https://000034.awsstudygroup.com/vi/> |
+| 6 | - Tự đánh giá các phần kiến thức còn hạn chế.<br>- Hoàn thiện sơ đồ tư duy liên kết các dịch vụ AWS đã học.<br>- Ôn lại CloudWatch và các công cụ theo dõi chi phí.<br>- Tổng hợp nội dung và xây dựng kế hoạch học tập cho giai đoạn tiếp theo. | 19/06/2026 | 19/06/2026 | <https://000008.awsstudygroup.com/vi/><br><https://000034.awsstudygroup.com/vi/><br><https://cloudjourney.awsstudygroup.com/vi/1.9-summary/> |
 
 
 ### Kết quả đạt được tuần 9:
 
-* Hiểu mục đích cơ bản của AWS Support.
+* Hệ thống hóa được các nhóm dịch vụ AWS đã học.
 
-* Tìm hiểu một số AWS Support plan.
+* Củng cố kiến thức về VPC, DynamoDB và kiến trúc Serverless.
 
-* Phân biệt cơ bản giữa:
-  * Account support
-  * Billing support
-  * Technical support
+* Phân biệt được mô hình EC2 kết hợp Auto Scaling với mô hình Serverless.
 
-* Làm quen với AWS Support Center.
+* Hoàn thành sơ đồ tư duy liên kết các dịch vụ AWS chính.
 
-* Kiểm tra support case và thông báo tài khoản.
+* Xác định được những nội dung còn hạn chế cần tiếp tục ôn tập.
 
-* Biết cách tìm tài liệu AWS và hướng dẫn xử lý sự cố.
-
-* Hiểu cơ bản về category và severity level của support case.
-
-* Chuẩn bị được subject và mô tả vấn đề ngắn gọn, rõ ràng.
-
-* Tạo support case đơn giản trong AWS Support Center.
-
-* Chọn category và phương thức liên hệ phù hợp.
-
-* Kiểm tra trạng thái và phản hồi của support case.
-
-* Biết cách bổ sung thông tin, phản hồi và đóng support case.
+* Xây dựng được lộ trình học hướng đến chứng chỉ AWS Associate.

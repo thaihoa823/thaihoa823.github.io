@@ -1,58 +1,41 @@
 ---
 title: "Worklog Tuần 7"
-date: 2026-05-25
+date: 2026-06-01
 weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
 
-{{% notice warning %}}
-Lưu ý: Nội dung dưới đây chỉ dùng để tham khảo, vui lòng không sao chép nguyên văn cho báo cáo của bạn.
-{{% /notice %}}
-
-
 ### Mục tiêu tuần 7:
 
-* Tìm hiểu các tính năng cơ bản của AWS Billing and Cost Management.
-* Hiểu AWS Cost Explorer, mức sử dụng Free Tier và AWS Budgets.
-* Thực hành tạo ngân sách đơn giản và kiểm tra chi phí dịch vụ.
+* Tìm hiểu các nguyên tắc bảo mật quan trọng trên AWS như phòng thủ nhiều lớp và cấp quyền tối thiểu.
+
+* Làm quen với các dịch vụ quản lý danh tính, phát hiện mối đe dọa và mã hóa dữ liệu.
+
+* Nắm được cách bảo vệ thông tin đăng nhập, mật khẩu và cấu hình nhạy cảm.
 
 
 ### Các công việc cần triển khai trong tuần này:
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 2 | - Tìm hiểu mục đích của AWS Billing and Cost Management <br> - Xem Billing Dashboard <br> - Kiểm tra số dư, các khoản phí và mức sử dụng Free Tier hiện tại | 25/05/2026 | 25/05/2026 | <https://000007.awsstudygroup.com/> |
-| 3 | - Tìm hiểu mục đích cơ bản của AWS Cost Explorer <br> - Xem chi phí theo dịch vụ và thời gian <br> - Kiểm tra các dịch vụ AWS có thể phát sinh chi phí | 26/05/2026 | 26/05/2026 | <https://000007.awsstudygroup.com/2-cost-explorer/> |
-| 4 | - Tìm hiểu AWS Budgets <br> - Tạo monthly cost budget đơn giản <br> - Thiết lập mức ngân sách nhỏ để thực hành | 27/05/2026 | 27/05/2026 | <https://000007.awsstudygroup.com/3-create-budget/> |
-| 5 | - Cấu hình email notification cho ngân sách <br> - Thiết lập cảnh báo khi actual cost hoặc forecasted cost đạt ngưỡng đã chọn <br> - Kiểm tra trạng thái ngân sách trong AWS Console | 28/05/2026 | 28/05/2026 | <https://000007.awsstudygroup.com/3-create-budget/> |
-| 6 | - Kiểm tra chi phí của các tài nguyên đã tạo trong những tuần trước <br> - Kiểm tra EC2, RDS, Load Balancer và các tài nguyên còn hoạt động <br> - Xóa các tài nguyên không sử dụng có thể phát sinh chi phí <br> - Kiểm tra lại Billing Dashboard sau khi cleanup | 29/05/2026 | 29/05/2026 | <https://000007.awsstudygroup.com/4-cost-control/> |
+| 2 | - Tìm hiểu nguyên tắc Defense in Depth và Least Privilege trong bảo mật hệ thống.<br>- Làm quen với Amazon GuardDuty và cách dịch vụ này phát hiện các hoạt động bất thường.<br>- Tìm hiểu AWS Security Hub để tổng hợp và quản lý các cảnh báo bảo mật. | 01/06/2026 | 01/06/2026 | <https://000098.awsstudygroup.com/vi/><br><https://000018.awsstudygroup.com/vi/> |
+| 3 | - Tìm hiểu Amazon Cognito trong việc đăng ký, đăng nhập và xác thực người dùng ứng dụng.<br>- Phân biệt Cognito User Pool và Identity Pool.<br>- Làm quen với AWS IAM Identity Center để quản lý người dùng và quyền truy cập tập trung. | 02/06/2026 | 02/06/2026 | <https://000141.awsstudygroup.com/vi/><br><https://000012.awsstudygroup.com/vi/> |
+| 4 | - Tìm hiểu AWS KMS và cách sử dụng khóa mã hóa để bảo vệ dữ liệu lưu trữ trên Amazon S3.<br>- Làm quen với AWS Certificate Manager trong việc tạo và quản lý chứng chỉ SSL/TLS.<br>- Nghiên cứu vai trò của HTTPS trong việc bảo vệ dữ liệu khi truyền qua mạng. | 03/06/2026 | 03/06/2026 | <https://000033.awsstudygroup.com/vi/><br><https://000082.awsstudygroup.com/vi/> |
+| 5 | - Tìm hiểu AWS Systems Manager Parameter Store để lưu trữ tham số và cấu hình ứng dụng.<br>- Nghiên cứu AWS Secrets Manager trong việc bảo vệ mật khẩu và thông tin kết nối cơ sở dữ liệu.<br>- Làm quen với cơ chế Secret Rotation để thay đổi thông tin đăng nhập định kỳ. | 04/06/2026 | 04/06/2026 | <https://000004.awsstudygroup.com/vi/5-amazonec2basic/5.5-keypair-ssm-windows/><br><https://000096.awsstudygroup.com/vi/> |
+| 6 | - Tìm hiểu cách AWS Security Hub tập trung các cảnh báo từ GuardDuty, Inspector và các dịch vụ bảo mật khác.<br>- Làm quen với AWS Support và quy trình tạo yêu cầu hỗ trợ khi gặp sự cố.<br>- Kiểm tra lại các cấu hình bảo mật và xóa tài nguyên thực hành không còn sử dụng. | 05/06/2026 | 05/06/2026 | <https://000018.awsstudygroup.com/vi/><br><https://000009.awsstudygroup.com/vi/> |
 
 
 ### Kết quả đạt được tuần 7:
 
-* Hiểu mục đích cơ bản của AWS Billing and Cost Management.
+* Nắm được nguyên tắc phòng thủ nhiều lớp và cấp quyền tối thiểu trên AWS.
 
-* Biết cách kiểm tra:
-  * Chi phí hiện tại của tài khoản
-  * Mức sử dụng Free Tier
-  * Chi phí theo tháng
-  * Chi phí theo từng dịch vụ AWS
+* Làm quen với GuardDuty và Security Hub trong việc phát hiện, quản lý cảnh báo bảo mật.
 
-* Làm quen với AWS Billing Dashboard.
+* Phân biệt được Cognito User Pool, Identity Pool và IAM Identity Center.
 
-* Sử dụng AWS Cost Explorer để xem thông tin chi phí cơ bản.
+* Áp dụng AWS KMS và ACM để bảo vệ dữ liệu lưu trữ và dữ liệu truyền qua mạng.
 
-* Xác định được một số tài nguyên AWS có thể phát sinh thêm chi phí.
+* Sử dụng Parameter Store và Secrets Manager để hạn chế lưu thông tin nhạy cảm trực tiếp trong mã nguồn.
 
-* Tạo monthly AWS Budget đơn giản.
-
-* Cấu hình email notification cho ngân sách.
-
-* Thiết lập ngưỡng cảnh báo cho actual cost hoặc forecasted cost.
-
-* Kiểm tra chi phí của các tài nguyên đã tạo trong các buổi thực hành trước.
-
-* Kiểm tra và xóa các tài nguyên AWS không còn sử dụng.
-
-* Hiểu tầm quan trọng của việc thường xuyên theo dõi mức sử dụng và chi phí AWS.
+* Hoàn thành kiểm tra cấu hình và dọn dẹp các tài nguyên thực hành.

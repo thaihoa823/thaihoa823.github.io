@@ -6,9 +6,7 @@ chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-Lưu ý: Nội dung dưới đây chỉ dùng để tham khảo, vui lòng không sao chép nguyên văn vào báo cáo của bạn.
-{{% /notice %}}
+
 
 # Báo cáo tổng kết: “AWS Study Group Meetup – Công nghệ, Điện toán đám mây, An ninh mạng, Trí tuệ nhân tạo và Phát triển nghề nghiệp”
 

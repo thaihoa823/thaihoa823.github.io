@@ -1,67 +1,43 @@
 ---
-title: "Worklog Tuần 11"
-date: 2026-06-22
-weight: 11
+title: "Worklog Tuần 12"
+date: 2026-07-06
+weight: 12
 chapter: false
-pre: " <b> 1.11. </b> "
+pre: " <b> 1.12. </b> "
 ---
 
-{{% notice warning %}}
-Lưu ý: Nội dung dưới đây chỉ dùng để tham khảo, vui lòng không sao chép nguyên văn cho báo cáo của bạn.
-{{% /notice %}}
 
 
-### Mục tiêu tuần 11:
+### Mục tiêu tuần 12:
 
-* Tìm hiểu mục đích và cách sử dụng cơ bản của AWS Command Line Interface.
-* Hiểu cách cài đặt AWS CLI, cấu hình profile, region và output format.
-* Thực hành chạy một số lệnh AWS CLI đơn giản với S3, IAM, VPC và EC2.
+* Hoàn thiện quy trình xử lý hình ảnh bất đồng bộ theo kiến trúc hướng sự kiện trên AWS.
+
+* Tích hợp Amazon S3, AWS Lambda, DynamoDB Streams và Amazon Rekognition để tự động xử lý, phân tích và lưu trữ thông tin hình ảnh.
+
+* Kiểm thử toàn bộ luồng hoạt động, theo dõi nhật ký và dọn dẹp các tài nguyên thực hành.
 
 
 ### Các công việc cần triển khai trong tuần này:
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 2 | - Tìm hiểu mục đích của AWS CLI <br> - Xem các môi trường dòng lệnh được hỗ trợ như PowerShell và Command Prompt <br> - Phân biệt cơ bản giữa sử dụng AWS Console và AWS CLI | 22/06/2026 | 22/06/2026 | <https://000011.awsstudygroup.com/> |
-| 3 | - Cài đặt AWS CLI trên máy tính cá nhân <br> - Kiểm tra phiên bản AWS CLI đã cài đặt <br> - Cấu hình CLI profile cơ bản với region và output format <br> - Chạy lệnh để xác minh AWS identity hiện tại | 23/06/2026 | 23/06/2026 | <https://000011.awsstudygroup.com/3-install-aws-cli/> |
-| 4 | - Chạy các lệnh đơn giản để liệt kê tài nguyên AWS hiện có <br> - Thực hành xem S3 bucket và object <br> - Kiểm tra kết quả lệnh ở định dạng JSON và table | 24/06/2026 | 24/06/2026 | <https://000011.awsstudygroup.com/4-view-resource-via-cli/> <br> <https://000011.awsstudygroup.com/5-aws-cli-with-amazon-s3/> |
-| 5 | - Thực hành xem thông tin IAM cơ bản bằng AWS CLI <br> - Liệt kê VPC, subnet và Security Group hiện có <br> - Tìm hiểu cấu trúc của AWS CLI command và parameter | 25/06/2026 | 25/06/2026 | <https://000011.awsstudygroup.com/7-aws-cli-with-iam/> <br> <https://000011.awsstudygroup.com/8-aws-cli-with-vpc/> |
-| 6 | - Xem lệnh cơ bản dùng để tạo EC2 instance <br> - Chạy các lệnh đơn giản để xem EC2 instance và kiểm tra trạng thái <br> - Tìm hiểu một số lỗi AWS CLI thường gặp và cách xử lý <br> - Xóa các tài nguyên tạm thời đã tạo trong quá trình thực hành | 26/06/2026 | 26/06/2026 | <https://000011.awsstudygroup.com/9-creating-ec2-using-aws-cli/> <br> <https://000011.awsstudygroup.com/10-troubleshooting/> <br> <https://000011.awsstudygroup.com/11-clean-up-resources/> |
+| 2 | - Tạo hai Amazon S3 Bucket riêng biệt để lưu ảnh gốc và ảnh đã xử lý.<br>- Cấu hình sự kiện Object Created để tự động kích hoạt AWS Lambda khi có ảnh mới được tải lên.<br>- Thiết lập IAM Role và quyền truy cập cần thiết cho Lambda. | 06/07/2026 | 06/07/2026 | <https://000078.awsstudygroup.com/vi/><br><https://000078.awsstudygroup.com/vi/2-resize-image-function/> |
+| 3 | - Xây dựng Lambda function để đọc ảnh từ S3, thay đổi kích thước và tối ưu dung lượng ảnh.<br>- Lưu ảnh sau xử lý vào Bucket đích.<br>- Theo dõi quá trình thực thi và kiểm tra lỗi thông qua Amazon CloudWatch Logs. | 07/07/2026 | 07/07/2026 | <https://000078.awsstudygroup.com/vi/2-resize-image-function/><br><https://000008.awsstudygroup.com/vi/> |
+| 4 | - Tạo bảng Amazon DynamoDB để lưu trữ metadata của hình ảnh.<br>- Xác định Partition Key và các thuộc tính cần thiết cho mỗi bản ghi.<br>- Kích hoạt DynamoDB Streams và liên kết Stream với Lambda function để xử lý các thay đổi dữ liệu. | 08/07/2026 | 08/07/2026 | <https://000078.awsstudygroup.com/vi/><br><https://000039.awsstudygroup.com/3-ladv/3.9/> |
+| 5 | - Xây dựng Lambda function nhận sự kiện từ DynamoDB Streams.<br>- Tích hợp Amazon Rekognition để nhận diện vật thể, phân loại nhãn và kiểm tra nội dung hình ảnh.<br>- Cập nhật kết quả phân tích vào bảng DynamoDB. | 09/07/2026 | 09/07/2026 | <https://000056.awsstudygroup.com/vi/2-adding-object-recognition-using-aws-rekognition/><br><https://000039.awsstudygroup.com/3-ladv/3.9/> |
+| 6 | - Kiểm thử toàn bộ luồng từ tải ảnh, xử lý ảnh, phân tích bằng Rekognition đến cập nhật metadata.<br>- Kiểm tra ảnh trong các S3 Bucket, dữ liệu trong DynamoDB và nhật ký thực thi trong CloudWatch.<br>- Sắp xếp mã nguồn, hoàn thiện tài liệu hướng dẫn và dọn dẹp các tài nguyên không còn sử dụng. | 10/07/2026 | 10/07/2026 | <https://000078.awsstudygroup.com/vi/4-cleanup/><br><https://000008.awsstudygroup.com/vi/><br><https://000056.awsstudygroup.com/vi/> |
 
 
-### Kết quả đạt được tuần 11:
+### Kết quả đạt được tuần 12:
 
-* Hiểu mục đích cơ bản của AWS CLI.
+* Hoàn thành quy trình xử lý hình ảnh bất đồng bộ theo kiến trúc hướng sự kiện.
 
-* Biết AWS CLI có thể được sử dụng từ:
-  * Windows PowerShell
-  * Command Prompt
-  * Linux hoặc macOS shell
-  * Amazon EC2 thông qua SSH hoặc Systems Manager
+* Kết nối thành công Amazon S3 với AWS Lambda để tự động thay đổi kích thước và tối ưu hình ảnh.
 
-* Cài đặt AWS CLI và kiểm tra phiên bản.
+* Sử dụng DynamoDB Streams để kích hoạt quá trình phân tích dữ liệu khi metadata thay đổi.
 
-* Cấu hình AWS CLI profile cơ bản.
+* Tích hợp Amazon Rekognition để nhận diện vật thể, gán nhãn và kiểm tra nội dung hình ảnh.
 
-* Biết ý nghĩa cơ bản của:
-  * Access key
-  * Secret access key
-  * Default region
-  * Output format
-  * Named profile
+* Kiểm tra thành công toàn bộ luồng xử lý thông qua Amazon CloudWatch Logs.
 
-* Xác minh AWS identity hiện tại bằng lệnh CLI.
-
-* Chạy các lệnh đơn giản để liệt kê tài nguyên S3.
-
-* Xem kết quả lệnh ở định dạng JSON và table.
-
-* Sử dụng các lệnh cơ bản để xem thông tin IAM và VPC.
-
-* Liệt kê VPC, subnet và Security Group.
-
-* Xem các lệnh mô tả EC2 instance và kiểm tra trạng thái.
-
-* Tìm hiểu một số bước xử lý lỗi AWS CLI cơ bản.
-
-* Xóa các tài nguyên tạm thời sau khi hoàn thành thực hành.
+* Đóng gói dự án và đẩy thành công Repo mã nguồn hoàn chỉnh có kèm file hướng dẫn cài đặt (README.md) chi tiết lên GitHub cá nhân. 

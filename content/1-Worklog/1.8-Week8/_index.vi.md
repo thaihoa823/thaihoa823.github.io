@@ -1,63 +1,42 @@
 ---
 title: "Worklog Tuần 8"
-date: 2026-06-01
+date: 2026-06-08
 weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
 
-{{% notice warning %}}
-Lưu ý: Nội dung dưới đây chỉ dùng để tham khảo, vui lòng không sao chép nguyên văn cho báo cáo của bạn.
-{{% /notice %}}
+
 
 
 ### Mục tiêu tuần 8:
 
-* Tìm hiểu các tính năng cơ bản của Amazon CloudWatch.
-* Hiểu CloudWatch Metrics, Logs, Alarms và Dashboards.
-* Thực hành giám sát một EC2 instance đơn giản và kiểm tra dữ liệu log.
+* Tìm hiểu tư duy thiết kế hệ thống của AWS Solutions Architect.
+
+* Nắm được sáu trụ cột của AWS Well-Architected Framework.
+
+* Làm quen với việc đánh giá và xây dựng sơ đồ kiến trúc AWS.
 
 
 ### Các công việc cần triển khai trong tuần này:
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 | --- | --- | --- | --- | --- |
-| 2 | - Tìm hiểu mục đích của Amazon CloudWatch <br> - Phân biệt cơ bản giữa Metrics, Logs, Alarms và Dashboards <br> - Làm quen với giao diện CloudWatch | 01/06/2026 | 01/06/2026 | <https://000008.awsstudygroup.com/> |
-| 3 | - Mở trang Metrics trong CloudWatch <br> - Xem các chỉ số EC2 cơ bản như CPU utilization và network traffic <br> - Thay đổi khoảng thời gian và cách hiển thị biểu đồ | 02/06/2026 | 02/06/2026 | <https://000008.awsstudygroup.com/2-cloudwatch-metrics/> |
-| 4 | - Kiểm tra CloudWatch Log Groups và Log Streams <br> - Mở các log có sẵn từ tài nguyên AWS <br> - Sử dụng CloudWatch Logs Insights để chạy truy vấn log đơn giản | 03/06/2026 | 03/06/2026 | <https://000008.awsstudygroup.com/3-cloudwatch-logs/> |
-| 5 | - Tạo CloudWatch Alarm cơ bản cho CPU utilization của EC2 <br> - Cấu hình ngưỡng cảnh báo <br> - Kiểm tra trạng thái alarm và thiết lập notification | 04/06/2026 | 04/06/2026 | <https://000008.awsstudygroup.com/4-cloudwatch-alarm/> |
-| 6 | - Tạo CloudWatch Dashboard đơn giản <br> - Thêm EC2 metric widget vào dashboard <br> - Kiểm tra thông tin giám sát và xóa alarm, dashboard tạm thời sau khi thực hành | 05/06/2026 | 05/06/2026 | <https://000008.awsstudygroup.com/5-cloudwatch-dashboard/> <br> <https://000008.awsstudygroup.com/6-clean-up/> |
+| 2 | - Tìm hiểu cách thiết kế hệ thống có tính sẵn sàng cao và khả năng mở rộng.<br>- Nghiên cứu cách kết hợp Elastic Load Balancing với Auto Scaling Group.<br>- Xác định các điểm lỗi đơn lẻ có thể làm gián đoạn hệ thống. | 08/06/2026 | 08/06/2026 | <https://000006.awsstudygroup.com/vi/> |
+| 3 | - Tìm hiểu các trụ cột Operational Excellence, Security và Reliability.<br>- Nghiên cứu CloudWatch trong giám sát hệ thống, Security Hub trong quản lý cảnh báo và AWS Backup trong bảo vệ dữ liệu. | 09/06/2026 | 09/06/2026 | <https://000008.awsstudygroup.com/vi/><br><https://000018.awsstudygroup.com/vi/><br><https://000013.awsstudygroup.com/vi/> |
+| 4 | - Tìm hiểu các trụ cột Performance Efficiency, Cost Optimization và Sustainability.<br>- Nghiên cứu cách Auto Scaling điều chỉnh tài nguyên theo nhu cầu.<br>- Làm quen với AWS Budgets, Cost Explorer và Tag trong theo dõi chi phí. | 10/06/2026 | 10/06/2026 | <https://000006.awsstudygroup.com/vi/><br><https://000007.awsstudygroup.com/vi/><br><https://000034.awsstudygroup.com/vi/> |
+| 5 | - Làm quen với các biểu tượng chuẩn dùng trong sơ đồ kiến trúc AWS.<br>- Xác định mối liên hệ giữa VPC, Subnet, EC2, Load Balancer, cơ sở dữ liệu và các dịch vụ giám sát.<br>- Thực hành phác thảo sơ đồ kiến trúc cơ bản bằng Draw.io. | 11/06/2026 | 11/06/2026 | <https://000003.awsstudygroup.com/vi/><br><https://000006.awsstudygroup.com/vi/> |
+| 6 | - Áp dụng sáu trụ cột Well-Architected để rà soát một kiến trúc AWS mẫu.<br>- Đánh giá các yếu tố về bảo mật, độ tin cậy, hiệu năng và chi phí.<br>- Hoàn thiện sơ đồ kiến trúc và đề xuất một số hướng cải thiện. | 12/06/2026 | 12/06/2026 | <https://000003.awsstudygroup.com/vi/><br><https://000008.awsstudygroup.com/vi/><br><https://000013.awsstudygroup.com/vi/><br><https://000018.awsstudygroup.com/vi/><br><https://000034.awsstudygroup.com/vi/> |
 
 
 ### Kết quả đạt được tuần 8:
 
-* Hiểu mục đích cơ bản của Amazon CloudWatch.
+* Nắm được sáu trụ cột của AWS Well-Architected Framework.
 
-* Biết ý nghĩa cơ bản của:
-  * CloudWatch Metrics
-  * CloudWatch Logs
-  * Log Group
-  * Log Stream
-  * CloudWatch Alarm
-  * CloudWatch Dashboard
+* Phân tích được vai trò của Load Balancer và Auto Scaling trong kiến trúc có tính sẵn sàng cao.
 
-* Xem được các chỉ số EC2 cơ bản trong CloudWatch Console.
+* Nhận diện được các điểm lỗi đơn lẻ trong hệ thống.
 
-* Kiểm tra biểu đồ CPU utilization và network traffic.
+* Áp dụng CloudWatch, Security Hub, AWS Backup và AWS Budgets vào việc đánh giá kiến trúc.
 
-* Kiểm tra các Log Group và Log Stream có sẵn.
-
-* Chạy truy vấn đơn giản bằng CloudWatch Logs Insights.
-
-* Tạo CloudWatch Alarm cơ bản cho CPU utilization của EC2.
-
-* Hiểu các trạng thái chính của alarm:
-  * OK
-  * In alarm
-  * Insufficient data
-
-* Tạo CloudWatch Dashboard đơn giản.
-
-* Thêm EC2 metric widget vào dashboard.
-
-* Xóa alarm và dashboard tạm thời sau khi hoàn thành thực hành.
+* Hoàn thành sơ đồ kiến trúc AWS cơ bản bằng Draw.io.

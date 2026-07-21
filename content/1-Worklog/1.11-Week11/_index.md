@@ -1,67 +1,41 @@
 ---
 title: "Week 11 Worklog"
-date: 2026-06-22
+date: 2026-06-29
 weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
 
-{{% notice warning %}}
-Note: The following information is for reference purposes only. Please do not copy verbatim for your own report.
-{{% /notice %}}
-
-
 ### Week 11 Objectives:
 
-* Learn the basic purpose and usage of the AWS Command Line Interface.
-* Understand AWS CLI installation, configuration, profiles, regions, and output formats.
-* Practice running simple AWS CLI commands with S3, IAM, VPC, and EC2.
+* Learn how to build and secure APIs in a serverless architecture on AWS.
+
+* Practice user authentication with Amazon Cognito and control access to APIs.
+
+* Become familiar with AWS WAF, AWS Lambda, and S3 Presigned URLs for secure file uploads.
 
 
-### Tasks to be carried out this week:
+### Tasks to Be Completed This Week:
 
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 2 | - Learn the purpose of AWS CLI <br> - Review supported command environments such as PowerShell and Command Prompt <br> - Understand the difference between using AWS Console and AWS CLI | 06/22/2026 | 06/22/2026 | <https://000011.awsstudygroup.com/> |
-| 3 | - Install AWS CLI on the local computer <br> - Check the installed AWS CLI version <br> - Configure a basic CLI profile with region and output format <br> - Run a command to verify the current AWS identity | 06/23/2026 | 06/23/2026 | <https://000011.awsstudygroup.com/3-install-aws-cli/> |
-| 4 | - Run simple commands to list available AWS resources <br> - Practice viewing S3 buckets and objects <br> - Review the command output in JSON and table formats | 06/24/2026 | 06/24/2026 | <https://000011.awsstudygroup.com/4-view-resource-via-cli/> <br> <https://000011.awsstudygroup.com/5-aws-cli-with-amazon-s3/> |
-| 5 | - Practice viewing basic IAM information with AWS CLI <br> - List available VPCs, subnets, and Security Groups <br> - Review the structure of AWS CLI commands and parameters | 06/25/2026 | 06/25/2026 | <https://000011.awsstudygroup.com/7-aws-cli-with-iam/> <br> <https://000011.awsstudygroup.com/8-aws-cli-with-vpc/> |
-| 6 | - Review the basic command used to create an EC2 instance <br> - Run simple commands to describe EC2 instances and check their status <br> - Review common CLI errors and troubleshooting steps <br> - Remove temporary resources created during practice | 06/26/2026 | 06/26/2026 | <https://000011.awsstudygroup.com/9-creating-ec2-using-aws-cli/> <br> <https://000011.awsstudygroup.com/10-troubleshooting/> <br> <https://000011.awsstudygroup.com/11-clean-up-resources/> |
+| 2 | - Learn about the secure file upload process for Amazon S3.<br>- Study how API Gateway, AWS Lambda, and Amazon S3 work together in a serverless architecture.<br>- Become familiar with using tokens to verify user requests. | 29/06/2026 | 29/06/2026 | <https://cloudjourney.awsstudygroup.com/vi/1.11-project-p1/><br><https://000078.awsstudygroup.com/vi/> |
+| 3 | - Practice creating an Amazon Cognito User Pool and App Client.<br>- Configure sign-in methods, password policies, and account verification.<br>- Learn how Cognito issues tokens after a user successfully signs in. | 30/06/2026 | 30/06/2026 | <https://cloudjourney.awsstudygroup.com/vi/1.11-project-p1/cognito/><br><https://000081.awsstudygroup.com/vi/2-create-user-pool/> |
+| 4 | - Create routes and HTTP methods in Amazon API Gateway.<br>- Integrate API Gateway with AWS Lambda to process requests.<br>- Configure a Cognito Authorizer to restrict API access to authenticated users. | 01/07/2026 | 01/07/2026 | <https://cloudjourney.awsstudygroup.com/vi/1.11-project-p1/apigateway/><br><https://000079.awsstudygroup.com/vi/1-introduction/><br><https://000117.awsstudygroup.com/6-identity/6.8-authorizer/> |
+| 5 | - Learn how AWS WAF protects websites and APIs from invalid or malicious requests.<br>- Become familiar with Web ACLs, AWS Managed Rules, and request rate limiting.<br>- Practice associating a Web ACL with the resource that needs protection. | 02/07/2026 | 02/07/2026 | <https://cloudjourney.awsstudygroup.com/vi/1.11-project-p1/waf/><br><https://000026.awsstudygroup.com/vi/3-useawswaf/> |
+| 6 | - Build a Lambda function that generates an S3 Presigned URL with a limited validity period.<br>- Review the IAM permissions required for Lambda to access Amazon S3.<br>- Test the process of calling the API and uploading files to S3 without granting public write access to the Bucket. | 03/07/2026 | 03/07/2026 | <https://cloudjourney.awsstudygroup.com/vi/1.11-project-p1/lambda-handler/><br><https://000078.awsstudygroup.com/vi/><br><https://000033.awsstudygroup.com/vi/6-demo/> |
 
 
 ### Week 11 Achievements:
 
-* Understood the basic purpose of AWS CLI.
+* Completed the configuration of an Amazon Cognito User Pool and App Client.
 
-* Learned that AWS CLI can be used from:
-  * Windows PowerShell
-  * Command Prompt
-  * Linux or macOS shell
-  * Amazon EC2 through SSH or Systems Manager
+* Created API Gateway routes integrated with AWS Lambda.
 
-* Installed AWS CLI and checked its version.
+* Applied a Cognito Authorizer to control access to the API.
 
-* Configured a basic AWS CLI profile.
+* Configured AWS WAF to improve API protection against unusual requests.
 
-* Learned the basic meaning of:
-  * Access key
-  * Secret access key
-  * Default region
-  * Output format
-  * Named profile
+* Generated an S3 Presigned URL for secure file uploads within a limited period.
 
-* Verified the current AWS identity using a CLI command.
-
-* Ran simple commands to list S3 resources.
-
-* Viewed command results in JSON and table formats.
-
-* Used basic commands to view IAM and VPC information.
-
-* Listed VPCs, subnets, and Security Groups.
-
-* Reviewed commands for describing EC2 instances and checking their status.
-
-* Learned several basic AWS CLI troubleshooting steps.
-
-* Removed temporary resources after completing the practice.
+* Successfully tested the authentication, API request, and Amazon S3 upload workflow.

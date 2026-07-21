@@ -1,57 +1,51 @@
 ---
 title: "Week 4 Worklog"
-date: 2026-05-04
+date: 2026-05-11
 weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
 
-{{% notice warning %}}
-Note: The following information is for reference purposes only. Please do not copy verbatim for your own report.
-{{% /notice %}}
-
-
 ### Week 4 Objectives:
 
-* Learn the basic concepts of Amazon EC2.
-* Understand instance types, Amazon Machine Images, key pairs, and security settings.
-* Practice launching, connecting to, and managing a simple EC2 instance.
+* Learn about common data storage models on AWS, including Object Storage, Block Storage, and File Storage.
+
+* Understand how to protect, classify, and optimize the cost of stored data.
+
+* Become familiar with backup and recovery methods for AWS resources.
 
 
-### Tasks to be carried out this week:
+### Tasks to Be Completed This Week:
 
 | Day | Task | Start Date | Completion Date | Reference Material |
 | --- | --- | --- | --- | --- |
-| 2 | - Learn the purpose of Amazon EC2 <br> - Understand Amazon Machine Images and instance types <br> - Review the main EC2 settings before launching an instance | 05/04/2026 | 05/04/2026 | <https://000004.awsstudygroup.com/> |
-| 3 | - Create an EC2 key pair <br> - Create or select a basic Security Group <br> - Launch a small Amazon Linux EC2 instance using a Free Tier eligible instance type | 05/05/2026 | 05/05/2026 | <https://000004.awsstudygroup.com/2-create-ec2/> |
-| 4 | - Check the EC2 instance status and network information <br> - Connect to the instance using SSH or EC2 Instance Connect <br> - Run several basic Linux commands on the instance | 05/06/2026 | 05/06/2026 | <https://000004.awsstudygroup.com/3-connect-ec2/> |
-| 5 | - Install a simple web server on the EC2 instance <br> - Create a basic test web page <br> - Update the Security Group to allow HTTP access <br> - Open the web page using the public IP address | 05/07/2026 | 05/07/2026 | <https://000004.awsstudygroup.com/4-install-web-server/> |
-| 6 | - Stop and start the EC2 instance <br> - Observe changes to the instance state and public IP address <br> - Review EC2 monitoring information <br> - Terminate the temporary instance after completing the practice | 05/08/2026 | 05/08/2026 | <https://000004.awsstudygroup.com/5-manage-ec2/> <br> <https://000004.awsstudygroup.com/6-clean-up/> |
+| 2 | - Learn about Amazon S3 and the storage classes designed for different data access frequencies.<br>- Become familiar with S3 Glacier for long-term data archiving.<br>- Learn how Bucket Versioning, Bucket Policies, and Block Public Access help protect stored data. | 07/05/2026 | 07/05/2026 | <https://000057.awsstudygroup.com/vi/><br><https://000078.awsstudygroup.com/vi/> |
+| 3 | - Learn about Amazon EBS and the SSD- and HDD-based volume types available for different storage requirements.<br>- Study how to create an EBS Snapshot for data backup.<br>- Learn the process of restoring an EBS Volume from an existing Snapshot. | 08/05/2026 | 08/05/2026 | <https://000004.awsstudygroup.com/vi/5-amazonec2basic/5.2-createec2snapshot/><br><https://100000.awsstudygroup.com/vi/1-intro/> |
+| 4 | - Distinguish between Object Storage, Block Storage, and File Storage.<br>- Become familiar with Amazon EFS and Amazon FSx for providing shared file systems.<br>- Learn the basic differences between EBS, EFS, and S3. | 11/05/2026 | 11/05/2026 | <https://100000.awsstudygroup.com/vi/1-intro/> |
+| 5 | - Learn about AWS Storage Gateway and its role in connecting on-premises storage systems with AWS.<br>- Become familiar with the process of creating a File Gateway and File Share.<br>- Learn how data from an on-premises environment can be synchronized with Amazon S3. | 12/05/2026 | 12/05/2026 | <https://000024.awsstudygroup.com/vi/2-useawsstoragegw/> |
+| 6 | - Learn about AWS Backup and centralized backup management.<br>- Become familiar with Backup Vaults, Backup Plans, and Recovery Points.<br>- Practice creating a backup plan for EBS and reviewing the data recovery process.<br>- Remove unused practice resources to avoid unexpected charges. | 13/05/2026 | 13/05/2026 | <https://000013.awsstudygroup.com/vi/> |
 
 
 ### Week 4 Achievements:
 
-* Understood the basic purpose of Amazon EC2.
+* Distinguished between the three main storage models:
+  * Object Storage
+  * Block Storage
+  * File Storage
 
-* Learned the basic meaning of:
-  * Amazon Machine Image
-  * Instance type
-  * Key pair
-  * Security Group
-  * Public IP address
+* Understood that Amazon S3 is suitable for storing files, static content, and large amounts of data.
 
-* Created an EC2 key pair and selected a basic Security Group.
+* Learned how Versioning, Bucket Policies, and Block Public Access can improve data protection in Amazon S3.
 
-* Launched a small Amazon Linux EC2 instance.
+* Understood that S3 Glacier is designed for infrequently accessed data that needs to be stored for long periods.
 
-* Checked the instance status and network information.
+* Learned that Amazon EBS provides block storage for EC2 Instances and can be backed up by using Snapshots.
 
-* Connected to the EC2 instance and used basic Linux commands.
+* Distinguished between the basic roles of Amazon S3, Amazon EBS, and Amazon EFS.
 
-* Installed a simple web server and created a test web page.
+* Understood how AWS Storage Gateway connects on-premises storage systems with AWS Cloud.
 
-* Accessed the test web page using the instance public IP address.
-
-* Practiced stopping and starting an EC2 instance.
-
-* Terminated the temporary EC2 instance after completing the practice.
+* Became familiar with the main components of AWS Backup:
+  * Backup Vault
+  * Backup Plan
+  * Recovery Point
