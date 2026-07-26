@@ -16,7 +16,7 @@ I accept full responsibility before the internship organization and my universit
 >
 > Each event includes its name, date and time, location, participation role, main topics, and the knowledge and experience I gained.
 
-During my internship, I participated in two community events related to cloud computing, artificial intelligence, cybersecurity, learning skills, and career orientation in the information technology field. Participating in these events helped me expand my technical knowledge, improve my learning methods, and better understand potential career development paths in the future.
+During my internship, I participated in three community events related to cloud computing, artificial intelligence, cybersecurity, Agentic AI, learning skills, teamwork, Hackathon experience, and career orientation in the information technology field. Participating in these events helped me expand my technical knowledge, improve my learning methods, gain practical insights into product development, and better understand potential career development paths in the future.
 
 
 ### [Event 1](4.1-Event1/)
@@ -50,3 +50,21 @@ During my internship, I participated in two community events related to cloud co
 &emsp;**Brief Description:** The event covered topics such as developing sustainable learning habits, using AI tools to create diagrams and data models, preparing and distributing CVs, understanding recruitment requirements in the information technology industry, and improving the quality of Large Language Model responses through structured Prompt Engineering.  
 
 &emsp;**Value Gained:** The event helped me improve my learning methods, better understand how AI can support study and work, practice writing more effective prompts, and prepare more carefully for internship and job applications.
+
+---
+
+### [Event 3](4.3-Event3/)
+
+&emsp;**Event Name:** Agentic AI and AWS Hackathon Journey – Practical Projects, Architecture, Cost Optimization, and Product Development  
+
+&emsp;**Date:** July 26, 2026  
+
+&emsp;**Time:** 09:00 – 12:00 
+
+&emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Sai Gon Ward, Ho Chi Minh City    
+
+&emsp;**Role:** Attendee  
+
+&emsp;**Brief Description:** The event included four presentations about practical Hackathon experiences and Agentic AI projects. The main topics included the S.H.E.P.H.E.R.D crowd-monitoring system using Computer Vision and AWS, the SignalScout corporate-strategy analysis platform, the Solution Architect Professional AI Native App, and the Colonel AI multi-channel conversational ordering Agent. The presentations also covered AWS architecture, product development, cost estimation, teamwork, technical challenges, and lessons learned from participating in Hackathons.  
+
+&emsp;**Value Gained:** The event helped me better understand how Agentic AI can be applied to real-world problems, how AWS services can be combined to build scalable and secure solutions, and why architecture, security, cost, teamwork, source-code management, and demo preparation should be considered from the beginning of a project. It also encouraged me to participate more actively in Hackathons and practical technology activities.
